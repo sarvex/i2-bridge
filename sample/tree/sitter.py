@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from typing import List, Dict, Optional
 import json
 from urllib.parse import urlparse
+import tree_sitter_python
 
 @dataclass
 class FunctionInfo:
@@ -39,33 +40,14 @@ class ModernPythonAnalyzer:
         """Initialize the analyzer with a repository path"""
         self.repo_path = Path(repo_path)
         self.parser = Parser()
-        self.language = self._setup_tree_sitter()
-        self.parser.set_language(self.language)
+        self.parser.set_language(tree_sitter_python.language())  # type: ignore
 
         # Storage for analysis results
         self.classes: Dict[str, ClassInfo] = {}
         self.functions: Dict[str, FunctionInfo] = {}
 
         # Define queries for code pattern matching
-        self._setup_queries(self.language)
-
-    def _setup_tree_sitter(self) -> Language:
-        """Set up and return the tree-sitter Python language"""
-        grammar_dir = Path('vendor/tree-sitter-python')
-
-        # Clone grammar if missing
-        if not grammar_dir.exists():
-            from git import Repo
-            Repo.clone_from(
-                'https://github.com/tree-sitter/tree-sitter-python',
-                grammar_dir
-            )
-
-        Language.build_library(
-            'build/python.so',
-            [str(grammar_dir)]
-        )
-        return Language('build/python.so', 'python')
+        self._setup_queries(self.parser.language)
 
     def _setup_queries(self, language: Language):
         """Set up tree-sitter queries for code pattern matching"""
