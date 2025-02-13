@@ -14,9 +14,6 @@ This analyzer provides detailed information about:
 - Dependencies
 - Package metadata
 - Compression statistics (for compressed files)
-
-Author: [Your Name]
-Version: 1.0.0
 """
 
 import gzip
