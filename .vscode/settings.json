@@ -1,13 +1,15 @@
 {
   "workbench.colorCustomizations": {
-    "sash.hoverBorder": "#dbcacc",
-    "statusBar.background": "#c6acaf",
-    "statusBar.border": "#c6acaf",
+    "sash.hoverBorder": "#df8cee",
+    "statusBar.background": "#d360e7",
+    "statusBar.border": "#d360e7",
     "statusBar.foreground": "#15202b",
-    "statusBarItem.hoverBackground": "#b18e92",
-    "statusBarItem.remoteBackground": "#c6acaf",
+    "statusBarItem.hoverBackground": "#c734e0",
+    "statusBarItem.remoteBackground": "#d360e7",
     "statusBarItem.remoteForeground": "#15202b",
-    "tab.activeBorder": "#dbcacc"
+    "tab.activeBorder": "#df8cee"
   },
-  "peacock.color": "#c6acaf"
+  "peacock.color": "#d360e7",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.typeCheckingMode": "basic"
 }
