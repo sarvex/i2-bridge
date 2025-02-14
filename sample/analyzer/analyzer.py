@@ -38,6 +38,7 @@ import astroid
 import uncompyle6
 from astroid import nodes
 from wheel.wheelfile import WheelFile
+from git import Repo, GitCommandError
 
 # Configure logging
 logging.basicConfig(
@@ -302,60 +303,6 @@ class BaseAnalyzer(ABC):
 
 class TemporaryDirectoryAnalyzer(BaseAnalyzer):
     """Base class for analyzers that need to work with temporary directories."""
-
-    def __init__(self, package_path: str):
-        super().__init__(package_path)
-        self.original_path = package_path
-
-    def create_temp_dir(self):
-        """Create a temporary directory for extraction."""
-        self.temp_dir = tempfile.mkdtemp(prefix=f'{self.__class__.__name__.lower()}_')
-        logger.info(f"Created temporary directory: {self.temp_dir}")
-
-    @abstractmethod
-    def extract_contents(self):
-        """Extract contents to temporary directory."""
-        pass
-
-    def analyze_package(self) -> None:
-        """Template method for package analysis."""
-        try:
-            self.create_temp_dir()
-            self.extract_contents()
-            self._analyze_extracted_contents()
-        finally:
-            self.cleanup()
-
-    def _analyze_extracted_contents(self):
-        """Analyze all Python files in the extracted contents."""
-        logger.info("Starting analysis of extracted contents")
-
-        try:
-            # Add extracted directory to Python path for proper imports
-            sys.path.insert(0, self.temp_dir)
-
-            # Change: Walk through temp_dir instead of package_path
-            for root, _, files in os.walk(self.temp_dir):
-                python_files = [f for f in files if f.endswith('.py')]
-
-                for file in python_files:
-                    file_path = os.path.join(root, file)
-                    try:
-                        logger.info(f"Analyzing file: {file_path}")
-                        self._analyze_file(file_path)
-                    except Exception as e:
-                        logger.error(f"Error analyzing {file_path}: {str(e)}")
-                        self.errors.append((file_path, str(e)))
-
-        finally:
-            # Change: Make sure we remove the correct path
-            if sys.path and sys.path[0] == self.temp_dir:
-                sys.path.pop(0)
-
-    """
-    Base class for analyzers that need to work with temporary directories.
-    This includes wheel packages and compressed source files.
-    """
 
     def __init__(self, package_path: str):
         super().__init__(package_path)
@@ -671,186 +618,81 @@ class CompressedSourceAnalyzer(TemporaryDirectoryAnalyzer):
             size_bytes /= 1024
         return f"{size_bytes:.2f} TB"
 
-class GitRepositoryAnalyzer(CompressedSourceAnalyzer):
-    """
-    Analyzer for Git repositories. This class handles downloading and analyzing
-    source code from various Git hosting platforms.
-    """
+class GitRepositoryAnalyzer(BaseAnalyzer):
+    """Analyzer for Git repositories"""
 
-    # Mapping of Git hosting platforms to their API endpoints
-    GIT_PLATFORMS = {
-        'github.com': {
-            'api_url': 'https://api.github.com/repos/{owner}/{repo}',
-            'download_url': 'https://github.com/{owner}/{repo}/archive/{branch}.zip',
-            'raw_pattern': r'github\.com[:/](?P<owner>[^/]+)/(?P<repo>[^/\.]+)'
-        },
-        'gitlab.com': {
-            'api_url': 'https://gitlab.com/api/v4/projects/{path}',
-            'download_url': 'https://gitlab.com/{path}/-/archive/{branch}/{repo}-{branch}.zip',
-            'raw_pattern': r'gitlab\.com[:/](?P<path>[^/]+/[^/\.]+)'
-        },
-        'bitbucket.org': {
-            'api_url': 'https://api.bitbucket.org/2.0/repositories/{owner}/{repo}',
-            'download_url': 'https://bitbucket.org/{owner}/{repo}/get/{branch}.zip',
-            'raw_pattern': r'bitbucket\.org[:/](?P<owner>[^/]+)/(?P<repo>[^/\.]+)'
-        }
-    }
-
-    def __init__(self, git_url: str, branch: str = 'main'):
-        """
-        Initialize the Git repository analyzer.
-
-        Args:
-            git_url: URL to the Git repository (HTTPS or SSH format)
-            branch: Branch to analyze (default: 'main')
-        """
+    def __init__(self, git_url: str, branch: str = 'master'):
+        super().__init__(git_url)
         self.git_url = git_url
         self.branch = branch
-        self.repo_info = {}
+        self.temp_dir: Optional[str] = None  # Add temp_dir attribute
 
-        # Create a temporary file for the downloaded repository
-        with tempfile.NamedTemporaryFile(suffix='.zip', delete=False) as temp_file:
-            self.temp_zip_path = temp_file.name
+    def create_temp_dir(self):
+        """Create temporary directory for cloning"""
+        self.temp_dir = tempfile.mkdtemp(prefix='git_analyzer_')
+        logger.info(f"Created temp directory: {self.temp_dir}")
 
-        # Initialize the parent class with the temporary zip file
-        super().__init__(self.temp_zip_path)
-
-        # Store additional repository information
-        self.platform = None
-        self.owner = None
-        self.repo_name = None
-        self.repo_path = None
-
-    def _parse_git_url(self) -> Tuple[str, str, str, str]:
-        """
-        Parse a Git URL into its components.
-
-        Returns:
-            Tuple containing (platform, owner/path, repository name, repository path)
-        """
-        # Convert SSH URLs to HTTPS format for parsing
-        if self.git_url.startswith('git@'):
-            self.git_url = self.git_url.replace(':', '/').replace('git@', 'https://')
-
-        # Parse the URL
-        parsed_url = urllib.parse.urlparse(self.git_url)
-        platform = parsed_url.netloc
-
-        # Find the matching platform and extract information
-        for host, config in self.GIT_PLATFORMS.items():
-            if host in platform:
-                match = re.search(config['raw_pattern'], self.git_url)
-                if match:
-                    groups = match.groupdict()
-                    if 'path' in groups:
-                        # GitLab style URL
-                        path = groups['path']
-                        owner, repo = path.split('/')
-                        return host, owner, repo, path
-                    else:
-                        # GitHub/Bitbucket style URL
-                        return host, groups['owner'], groups['repo'], f"{groups['owner']}/{groups['repo']}"
-
-        raise ValueError(f"Unsupported Git platform or invalid URL: {self.git_url}")
-
-    def _download_repository(self):
-        """
-        Download the repository from the Git hosting platform.
-        This method handles authentication and different hosting platforms.
-        """
-        try:
-            # Parse the Git URL
-            self.platform, self.owner, self.repo_name, self.repo_path = self._parse_git_url()
-            platform_config = self.GIT_PLATFORMS[self.platform]
-
-            # Get repository information from API
-            api_url = platform_config['api_url'].format(
-                owner=self.owner,
-                repo=self.repo_name,
-                path=urllib.parse.quote(self.repo_path, safe='')
-            )
-
-            # Prepare headers for API request
-            headers = {'Accept': 'application/json'}
-
-            # Add authentication if environment variables are set
-            if 'GITHUB_TOKEN' in os.environ and self.platform == 'github.com':
-                headers['Authorization'] = f"token {os.environ['GITHUB_TOKEN']}"
-            elif 'GITLAB_TOKEN' in os.environ and self.platform == 'gitlab.com':
-                headers['PRIVATE-TOKEN'] = os.environ['GITLAB_TOKEN']
-
-            # Get repository information
-            try:
-                req = urllib.request.Request(api_url, headers=headers)
-                with urllib.request.urlopen(req) as response:
-                    self.repo_info = json.loads(response.read().decode())
-            except Exception as e:
-                logger.warning(f"Could not fetch repository information: {e}")
-
-            # Get the default branch if none specified
-            if not self.branch:
-                self.branch = self.repo_info.get('default_branch', 'main')
-
-            # Download the repository
-            download_url = platform_config['download_url'].format(
-                owner=self.owner,
-                repo=self.repo_name,
-                path=self.repo_path,
-                branch=self.branch
-            )
-
-            logger.info(f"Downloading repository from {download_url}")
-
-            req = urllib.request.Request(download_url, headers=headers)
-            with urllib.request.urlopen(req) as response:
-                with open(self.temp_zip_path, 'wb') as f:
-                    f.write(response.read())
-
-            logger.info("Repository downloaded successfully")
-
-        except Exception as e:
-            raise RuntimeError(f"Failed to download repository: {str(e)}")
+    def cleanup(self):
+        """Clean up temporary directory"""
+        if self.temp_dir and os.path.exists(self.temp_dir):
+            shutil.rmtree(self.temp_dir)
+            logger.info(f"Cleaned up temp directory: {self.temp_dir}")
 
     def analyze_package(self) -> None:
-        """
-        Download and analyze the Git repository.
-        """
+        """Analyze Git repository"""
+        self.create_temp_dir()
         try:
-            self._download_repository()
-            super().analyze_package()
+            self._clone_repository()
+            self._process_cloned_repo()
         finally:
-            # Clean up the temporary zip file
-            if os.path.exists(self.temp_zip_path):
-                os.unlink(self.temp_zip_path)
-                logger.info("Cleaned up temporary zip file")
+            self.cleanup()
 
-    def generate_report(self) -> str:
+    def _clone_repository(self):
+        """Clone the Git repository"""
+        logger.info(f"Cloning {self.git_url}...")
+        Repo.clone_from(
+            self.git_url,
+            self.temp_dir,
+            depth=1,
+            branch=self.branch
+        )
+
+    def _process_cloned_repo(self):
+        """Process the cloned repository"""
+        # Find the actual package root
+        package_root = self._find_package_root()
+        if package_root:
+            self.package_path = package_root
+
+        # Analyze all Python files
+        for root, _, files in os.walk(self.temp_dir):
+            for file in files:
+                if file.endswith('.py'):
+                    self._analyze_file(os.path.join(root, file))
+
+    def _find_package_root(self) -> Optional[str]:
         """
-        Generate a detailed report including Git repository information.
+        Find the root directory of the Python package in the extracted contents.
+        This helps handle cases where the compressed file might have a root directory.
         """
-        # Get the base report
-        report = super().generate_report()
+        # Look for the first directory containing an __init__.py file
+        for root, dirs, files in os.walk(self.temp_dir):
+            if '__init__.py' in files:
+                return root
 
-        # Add Git repository information
-        git_section = [
-            "\nGit Repository Information",
-            "========================",
-            f"Repository: {self.git_url}",
-            f"Platform: {self.platform}",
-            f"Branch: {self.branch}",
-        ]
+            # Check first-level directories only
+            if root == self.temp_dir:
+                for dir_name in dirs:
+                    dir_path = os.path.join(root, dir_name)
+                    if os.path.isfile(os.path.join(dir_path, '__init__.py')):
+                        return dir_path
 
-        # Add additional repository information if available
-        if self.repo_info:
-            git_section.extend([
-                f"Description: {self.repo_info.get('description', 'N/A')}",
-                f"Stars: {self.repo_info.get('stargazers_count', 'N/A')}",
-                f"Forks: {self.repo_info.get('forks_count', 'N/A')}",
-                f"Last Updated: {self.repo_info.get('updated_at', 'N/A')}",
-                f"Language: {self.repo_info.get('language', 'N/A')}"
-            ])
+        # If no __init__.py is found, return the first directory containing .py files
+        for root, _, files in os.walk(self.temp_dir):
+            if any(f.endswith('.py') for f in files):
+                return root
 
-        return report + '\n\n' + '\n'.join(git_section)
+        return self.temp_dir
 
 class PackageAnalyzerFactory:
     """Factory for creating appropriate analyzer based on package type."""
