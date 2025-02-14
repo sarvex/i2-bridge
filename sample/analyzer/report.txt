@@ -1,0 +1,6904 @@
+Package Analysis Report
+=====================
+
+Package: /var/folders/bz/0w9fcj191yv6nj2tgd5wdx6r0000gn/T/git_analyzer_5bencf97/dglgo/dglgo
+
+Metrics:
+- Total Files: 1227
+- Total Classes: 1378
+- Total Functions: 4339
+- Average Complexity: 3.27
+- Total Lines of Code: 141318
+- Analysis Errors: 0
+
+Class Hierarchy:
+
+../../benchmarks/benchmarks/model_acc/bench_gat.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_gcn.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_gcn_udf.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_gcn_udf.py::GraphConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_rgcn_ns.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_rgcn_ns.py::RelGraphEmbedLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_sage.py::GraphSAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_acc/bench_sage_ns.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_gat.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_gat_ns.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_gcn_udf.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_gcn_udf.py::GraphConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::BagOfWords:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::BagOfWordsPretrained:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::ItemToItemBatchSampler:
+  Bases: IterableDataset
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::ItemToItemScorer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::LinearProjector:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::NeighborSampler:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::PinSAGECollator:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::PinSAGEModel:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::SAGENet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_pinsage.py::WeightedSAGEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_rgcn_hetero_ns.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_rgcn_hetero_ns.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_rgcn_hetero_ns.py::RelGraphEmbed:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_rgcn_homogeneous_ns.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_rgcn_homogeneous_ns.py::RelGraphEmbedLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_sage.py::GraphSAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_sage_ns.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_sage_unsupervised_ns.py::CrossEntropyLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_sage_unsupervised_ns.py::NegativeSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/model_speed/bench_sage_unsupervised_ns.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/multigpu/bench_multigpu_rgcn.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/multigpu/bench_multigpu_rgcn.py::NeighborSampler:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/multigpu/bench_multigpu_sage.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/multigpu/rgcn_model.py::BaseRGCN:
+  Bases: nn.Module
+  Methods: 6
+  Attributes: 0
+
+../../benchmarks/benchmarks/multigpu/rgcn_model.py::RelGraphEmbedLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../benchmarks/benchmarks/rgcn.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/utils.py::OGBDataset:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../benchmarks/benchmarks/utils.py::PinsageDataset:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../benchmarks/benchmarks/utils.py::TestFilter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../benchmarks/benchmarks/utils.py::Timer:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/advanced/cugraph/graphsage.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/advanced/cugraph/rgcn.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/core/Graphormer/dataset.py::MolHIVDataset:
+  Bases: th.utils.data.Dataset
+  Methods: 2
+  Attributes: 0
+
+../../examples/core/Graphormer/model.py::Graphormer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/core/gat/train.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/core/gated_gcn/train.py::GatedGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/core/graphsage/node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/core/rgcn/hetero_rgcn.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/core/rgcn/hetero_rgcn.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/distributed/graphsage/node_classification.py::DistSAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/distributed/graphsage/node_classification_unsupervised.py::CrossEntropyLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../examples/distributed/graphsage/node_classification_unsupervised.py::DistSAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/distributed/rgcn/node_classification.py::DistEmbedLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/distributed/rgcn/node_classification.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/distributed/rgcn/node_classification.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/disk_based_feature/node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/graphbolt/lightning/node_classification.py::DataModule:
+  Bases: LightningDataModule
+  Methods: 4
+  Attributes: 0
+
+../../examples/graphbolt/lightning/node_classification.py::SAGE:
+  Bases: LightningModule
+  Methods: 6
+  Attributes: 0
+
+../../examples/graphbolt/link_prediction.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/graphbolt/pyg/hetero/node_classification.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/pyg/hetero/node_classification.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/pyg/labor/node_classification.py::GraphSAGE:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/pyg/labor/sage_conv.py::SAGEConv:
+  Bases: MessagePassing
+  Methods: 6
+  Attributes: 0
+
+../../examples/graphbolt/pyg/link_prediction.py::GraphSAGE:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/pyg/multigpu/node_classification.py::GraphSAGE:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/pyg/node_classification.py::GraphSAGE:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/pyg/node_classification_advanced.py::GraphSAGE:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/quickstart/link_prediction.py::GraphSAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/quickstart/node_classification.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/rgcn/hetero_rgcn.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/rgcn/hetero_rgcn.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/sparse/graphsage.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/sparse/graphsage.py::SAGEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/sparse/graphsage.py::SparseNeighborSampler:
+  Bases: SubgraphSampler
+  Methods: 2
+  Attributes: 0
+
+../../examples/graphbolt/temporal_link_prediction.py::CategoricalEncoder:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/graphbolt/temporal_link_prediction.py::HeteroSAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/legacy/link_prediction.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/legacy/node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/multigpu/graphbolt/node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/multigpu/node_classification_sage.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/appnp/appnp.py::APPNP:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gat/gat.py::GAT:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gat/utils.py::EarlyStopping:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/gcn/gcn.py::GCN:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gcn/gcn_concat.py::GCN:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gcn/gcn_concat.py::GCNLayer:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gcn/gcn_mp.py::GCN:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gcn/gcn_mp.py::GCNLayer:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gcn/gcn_mp.py::NodeUpdate:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gin/dataloader.py::GraphDataLoader:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+../../examples/mxnet/gin/dataloader.py::SubsetRandomSampler:
+  Bases: Sampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/gin/gin.py::ApplyNodeFunc:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gin/gin.py::GIN:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gin/gin.py::MLP:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/gin/parser.py::Parser:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/graphsage/main.py::GraphSAGE:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/monet/citation.py::MoNet:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/rgcn/entity_classify.py::EntityClassify:
+  Bases: BaseRGCN
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/rgcn/model.py::BaseRGCN:
+  Bases: gluon.Block
+  Methods: 6
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/data/object.py::VGObject:
+  Bases: COCODetection
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/data/relation.py::VGRelation:
+  Bases: VisionDataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/faster_rcnn.py::FasterRCNN:
+  Bases: RCNN
+  Methods: 5
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/reldn.py::EdgeBBoxExtend:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/reldn.py::EdgeConfMLP:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/reldn.py::EdgeFreqPrior:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/reldn.py::EdgeSpatial:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/reldn.py::EdgeVisual:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/model/reldn.py::RelDN:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/train_faster_rcnn.py::ForwardBackwardTask:
+  Bases: Parallelizable
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/utils/metric.py::AUCMetric:
+  Bases: mx.metric.EvalMetric
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/utils/metric.py::PhrCls:
+  Bases: mx.metric.EvalMetric
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/utils/metric.py::PredCls:
+  Bases: mx.metric.EvalMetric
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/utils/metric.py::SGDet:
+  Bases: mx.metric.EvalMetric
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/scenegraph/utils/metric.py::SGDetPlus:
+  Bases: mx.metric.EvalMetric
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/tagcn/tagcn.py::TAGCN:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/tree_lstm/tree_lstm.py::ChildSumTreeLSTMCell:
+  Bases: _TreeLSTMCell
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/tree_lstm/tree_lstm.py::TreeLSTM:
+  Bases: gluon.nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/tree_lstm/tree_lstm.py::TreeLSTMCell:
+  Bases: _TreeLSTMCell
+  Methods: 2
+  Attributes: 0
+
+../../examples/mxnet/tree_lstm/tree_lstm.py::_TreeLSTMCell:
+  Bases: gluon.HybridBlock
+  Methods: 3
+  Attributes: 0
+
+../../examples/mxnet/tree_lstm/tree_lstm.py::_TreeLSTMCellNodeFunc:
+  Bases: gluon.HybridBlock
+  Methods: 1
+  Attributes: 0
+
+../../examples/mxnet/tree_lstm/tree_lstm.py::_TreeLSTMCellReduceFunc:
+  Bases: gluon.HybridBlock
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main.py::DGLGATNE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main.py::NSLoss:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main_sparse.py::DGLGATNE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main_sparse.py::NSLoss:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main_sparse.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main_sparse_multi_gpus.py::DGLGATNE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main_sparse_multi_gpus.py::NSLoss:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/GATNE-T/src/main_sparse_multi_gpus.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/GNN-FiLM/main.py::GNNFiLM:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/GNN-FiLM/main.py::GNNFiLMLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/NGCF/NGCF/model.py::NGCF:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/NGCF/NGCF/model.py::NGCFLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/NGCF/NGCF/utility/load_data.py::Data:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/P-GNN/model.py::PGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/P-GNN/model.py::PGNN_layer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/TAHIN/TAHIN.py::HANLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/TAHIN/TAHIN.py::RelationalAGG:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/TAHIN/TAHIN.py::SemanticAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/TAHIN/TAHIN.py::TAHIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/TAHIN/data_loader.py::MyDataset:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/appnp/appnp.py::APPNP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/argo/argo.py::ARGO:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/argo/main.py::GNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/argo/ogb_example.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/argo/ogb_example_ARGO.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/arma/model.py::ARMA4NC:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/arma/model.py::ARMAConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/bgnn/BGNN.py::BGNNPredictor:
+  Bases:
+  Methods: 17
+  Attributes: 0
+
+../../examples/pytorch/bgnn/run.py::GNNModelDGL:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/bgrl/model.py::BGRL:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/bgrl/model.py::GCN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/bgrl/model.py::GraphSAGE_GCN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/bgrl/model.py::LayerNorm:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/bgrl/model.py::MLP_Predictor:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/bgrl/utils.py::CosineDecayScheduler:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/capsule/DGLDigitCapsule.py::DGLDigitCapsuleLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/capsule/DGLRoutingLayer.py::DGLRoutingLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/capsule/model.py::Net:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/capsule/model.py::PrimaryCapsuleLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/caregnn/model.py::CAREConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/caregnn/model.py::CAREGNN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/caregnn/model_sampling.py::CAREConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/caregnn/model_sampling.py::CAREGNN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/caregnn/model_sampling.py::CARESampler:
+  Bases: dgl.dataloading.BlockSampler
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/caregnn/utils.py::EarlyStopping:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/cluster_gcn/cluster_gcn.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/compGCN/data_loader.py::Data:
+  Bases: object
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/compGCN/data_loader.py::TestDataset:
+  Bases: Dataset
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/compGCN/data_loader.py::TrainDataset:
+  Bases: Dataset
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/compGCN/models.py::CompGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/compGCN/models.py::CompGCN_ConvE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/compGCN/models.py::CompGraphConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/correct_and_smooth/model.py::CorrectAndSmooth:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/correct_and_smooth/model.py::LabelPropagation:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/correct_and_smooth/model.py::MLP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/correct_and_smooth/model.py::MLPLinear:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dagnn/main.py::DAGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dagnn/main.py::DAGNNConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dagnn/main.py::MLPLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/deepergcn/layers.py::GENConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/deepergcn/models.py::DeeperGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/deepergcn/modules.py::MLP:
+  Bases: nn.Sequential
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/deepergcn/modules.py::MessageNorm:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dgi/dgi.py::Classifier:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dgi/dgi.py::DGI:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dgi/dgi.py::Discriminator:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/dgi/dgi.py::Encoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dgi/gcn.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dgmg/cycles.py::CycleDataset:
+  Bases: Dataset
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/dgmg/cycles.py::CycleModelEvaluation:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dgmg/cycles.py::CyclePrinting:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dgmg/model.py::AddEdge:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dgmg/model.py::AddNode:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/dgmg/model.py::ChooseDestAndUpdate:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/dgmg/model.py::DGMG:
+  Bases: nn.Module
+  Methods: 11
+  Attributes: 0
+
+../../examples/pytorch/dgmg/model.py::GraphEmbed:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dgmg/model.py::GraphProp:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/aggregator.py::Aggregator:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/aggregator.py::LSTMAggregator:
+  Bases: Aggregator
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/aggregator.py::MaxPoolAggregator:
+  Bases: Aggregator
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/aggregator.py::MeanAggregator:
+  Bases: Aggregator
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/bundler.py::Bundler:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/gnn.py::DiffPoolBatchedGraphLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/gnn.py::GraphSage:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/dgl_layers/gnn.py::GraphSageLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/encoder.py::DiffPool:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/loss.py::EntropyLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/loss.py::LinkPredLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/tensorized_layers/assignment.py::DiffPoolAssignment:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/tensorized_layers/diffpool.py::BatchedDiffPool:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/diffpool/model/tensorized_layers/graphsage.py::BatchedGraphSAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/bessel_basis_layer.py::BesselBasisLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/dimenet.py::DimeNet:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/dimenet_pp.py::DimeNetPP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/embedding_block.py::EmbeddingBlock:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/envelope.py::Envelope:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/interaction_block.py::InteractionBlock:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/interaction_pp_block.py::InteractionPPBlock:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/output_block.py::OutputBlock:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/output_pp_block.py::OutputPPBlock:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/residual_layer.py::ResidualLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/modules/spherical_basis_layer.py::SphericalBasisLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dimenet/qm9.py::QM9:
+  Bases: QM9Dataset
+  Methods: 9
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::METR_LATestDataset:
+  Bases: SnapShotDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::METR_LATrainDataset:
+  Bases: SnapShotDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::METR_LAValidDataset:
+  Bases: SnapShotDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::PEMS_BAYTestDataset:
+  Bases: SnapShotDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::PEMS_BAYTrainDataset:
+  Bases: SnapShotDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::PEMS_BAYValidDataset:
+  Bases: SnapShotDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dataloading.py::SnapShotDataset:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/dcrnn.py::DiffConv:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/gaan.py::GatedGAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/gaan.py::WeightedGATConv:
+  Bases: dglnn.GATConv
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/model.py::GraphGRUCell:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/model.py::GraphRNN:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/model.py::StackedDecoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/model.py::StackedEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/dtgrnn/utils.py::NormalizationLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/eeg-gcnn/EEGGraphDataset.py::EEGGraphDataset:
+  Bases: DGLDataset
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/eeg-gcnn/deep_EEGGraphConvNet.py::EEGGraphConvNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/eeg-gcnn/shallow_EEGGraphConvNet.py::EEGGraphConvNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/eges/model.py::EGES:
+  Bases: th.nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/eges/sampler.py::Sampler:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/eges/utils.py::TestEdge:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/dataset.py::EllipticDataset:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/model.py::EvolveGCNH:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/model.py::EvolveGCNO:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/model.py::MatGRUCell:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/model.py::MatGRUGate:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/model.py::TopK:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/evolveGCN/utils.py::Measure:
+  Bases: object
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/gas/dataloader.py::GASDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 10
+  Attributes: 0
+
+../../examples/pytorch/gas/model.py::GAS:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gas/model.py::GASConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gas/model.py::MLP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gas/model_sampling.py::GAS:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gas/model_sampling.py::GASConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gas/model_sampling.py::MLP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gat/train.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gat/train_ppi.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gatv2/gatv2.py::GATv2:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gatv2/train.py::EarlyStopping:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gcmc/data.py::MovieLens:
+  Bases: object
+  Methods: 13
+  Attributes: 0
+
+../../examples/pytorch/gcmc/model.py::BiDecoder:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gcmc/model.py::DenseBiDecoder:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gcmc/model.py::GCMCGraphConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gcmc/model.py::GCMCLayer:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/gcmc/train.py::Net:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gcmc/train_sampling.py::Net:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gcmc/utils.py::MetricLogger:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gcn/train.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/geniepath/model.py::GeniePath:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/geniepath/model.py::GeniePathConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/geniepath/model.py::GeniePathLazy:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ggnn/ggnn_gc.py::GraphClsGGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ggnn/ggnn_ns.py::NodeSelectionGGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ggnn/ggsnn.py::GGSNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gin/train.py::GIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gin/train.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gnn_explainer/models.py::Layer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gnn_explainer/models.py::Model:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/grace/model.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/grace/model.py::Grace:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/grace/model.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/grand/model.py::GRAND:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/grand/model.py::MLP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graph_matching/ged.py::search_tree_node:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsage/advanced/model.py::SAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/graphsage/advanced/negative_sampler.py::NegativeSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsage/advanced/train_lightning_unsupervised.py::CrossEntropyLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/graphsage/advanced/train_lightning_unsupervised.py::DataModule:
+  Bases: LightningDataModule
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsage/advanced/train_lightning_unsupervised.py::SAGELightning:
+  Bases: LightningModule
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/graphsage/advanced/train_lightning_unsupervised.py::UnsupervisedClassification:
+  Bases: Callback
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsage/dist/train_dist.py::DistSAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/graphsage/dist/train_dist_transductive.py::DistEmb:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsage/dist/train_dist_unsupervised.py::CrossEntropyLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/graphsage/dist/train_dist_unsupervised.py::DistSAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/graphsage/lightning/node_classification.py::DataModule:
+  Bases: LightningDataModule
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsage/lightning/node_classification.py::SAGE:
+  Bases: LightningModule
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/graphsage/link_pred.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsage/node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsage/train_full.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/modules.py::GCNLayer:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/modules.py::GCNNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/sampler.py::SAINTEdgeSampler:
+  Bases: SAINTSampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/sampler.py::SAINTNodeSampler:
+  Bases: SAINTSampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/sampler.py::SAINTRandomWalkSampler:
+  Bases: SAINTSampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/sampler.py::SAINTSampler:
+  Bases:
+  Methods: 9
+  Attributes: 0
+
+../../examples/pytorch/graphsaint/utils.py::Logger:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsim/dataloader.py::MultiBodyDataset:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsim/dataloader.py::MultiBodyGraphCollator:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsim/dataloader.py::MultiBodyTestDataset:
+  Bases: MultiBodyDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/graphsim/dataloader.py::MultiBodyTrainDataset:
+  Bases: MultiBodyDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/graphsim/dataloader.py::MultiBodyValidDataset:
+  Bases: MultiBodyDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/graphsim/models.py::InteractionLayer:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/graphsim/models.py::InteractionNet:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphsim/models.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphsim/models.py::PrepareLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/graphwriter.py::GraphWriter:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/modules.py::BiLSTM:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/modules.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/modules.py::GraphTrans:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/modules.py::MSA:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/utlis.py::BucketSampler:
+  Bases: torch.utils.data.Sampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/utlis.py::Example:
+  Bases: object
+  Methods: 7
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/utlis.py::GWdataset:
+  Bases: torch.utils.data.Dataset
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/graphwriter/utlis.py::Vocab:
+  Bases: object
+  Methods: 8
+  Attributes: 0
+
+../../examples/pytorch/gxn/layers.py::DenseLayer:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gxn/layers.py::Discriminator:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/gxn/layers.py::GraphConvWithDropout:
+  Bases: GraphConv
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gxn/layers.py::GraphPool:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gxn/layers.py::GraphUnpool:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gxn/layers.py::IndexSelect:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gxn/networks.py::GraphClassifier:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gxn/networks.py::GraphCrossModule:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/gxn/networks.py::GraphCrossNet:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/han/model.py::HAN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/model.py::HANLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/model.py::SemanticAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/model_hetero.py::HAN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/model_hetero.py::HANLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/model_hetero.py::SemanticAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/train_sampling.py::HAN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/train_sampling.py::HANLayer:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/train_sampling.py::HANSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/han/utils.py::EarlyStopping:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/hardgat/hgao.py::HardGAO:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/hardgat/hgao.py::HardGAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hardgat/utils.py::EarlyStopping:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/functions.py::EdgeSparsemax:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/functions.py::EdgeSparsemaxFunction:
+  Bases: Function
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/layers.py::ConvPoolReadout:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/layers.py::HGPSLPool:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/layers.py::NodeInfoScoreLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/layers.py::WeightedGraphConv:
+  Bases: GraphConv
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/hgp_sl/networks.py::HGPSLModel:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgt/model.py::HGT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgt/model.py::HGTLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgt/model.py::HeteroRGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hgt/model.py::HeteroRGCNLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/auxiliaries.py::CSV_Writer:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/auxiliaries.py::LOGGER:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/datasets.py::BaseTripletDataset:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/datasets.py::TrainDatasetsmoothap:
+  Bases: Dataset
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/datasets.py::TrainDatasetsmoothap1Head:
+  Bases: Dataset
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/evaluate.py::DistanceMeasure:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/evaluate.py::GradientMeasure:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/losses.py::BinarizedF:
+  Bases: torch.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/losses.py::BinarizedModule:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/losses.py::SmoothAP:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/PSS/Smooth_AP/src/netlib.py::ResNet50:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/dataset/dataset.py::LanderDataset:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/hilander/models/focal_loss.py::FocalLoss:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/models/graphconv.py::GraphConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/models/graphconv.py::GraphConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/hilander/models/lander.py::LANDER:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/hilander/utils/faiss_gpu.py::faiss_index_wrapper:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/hilander/utils/knn.py::knn:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/hilander/utils/knn.py::knn_faiss:
+  Bases: knn
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/hilander/utils/knn.py::knn_faiss_gpu:
+  Bases: knn
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/hilander/utils/misc.py::TextColors:
+  Bases:
+  Methods: 0
+  Attributes: 0
+
+../../examples/pytorch/hilander/utils/misc.py::Timer:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/infograph/evaluate_embedding.py::LogReg:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/infograph/model.py::FeedforwardNetwork:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/infograph/model.py::GINEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/infograph/model.py::InfoGraph:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/infograph/model.py::InfoGraphS:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/infograph/model.py::NNConvEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/infograph/semisupervised.py::DenseQM9EdgeDataset:
+  Bases: QM9EdgeDataset
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/jknet/model.py::JKNet:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/datautils.py::JTNNCollator:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/datautils.py::JTNNDataset:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtmpn.py::DGLJTMPN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtmpn.py::GatherUpdate:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtmpn.py::LoopyBPUpdate:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtnn_dec.py::DGLJTNNDecoder:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtnn_enc.py::DGLJTNNEncoder:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtnn_enc.py::EncoderGatherUpdate:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/jtnn_vae.py::DGLJTNNVAE:
+  Bases: nn.Module
+  Methods: 9
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/mol_tree.py::Vocab:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/mol_tree_nx.py::DGLMolTree:
+  Bases: object
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/mpn.py::DGLMPN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/mpn.py::GatherUpdate:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/mpn.py::LoopyBPUpdate:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/jtnn/jtnn/nnutils.py::GRUUpdate:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/labor/ladies_sampler.py::LadiesSampler:
+  Bases: dgl.dataloading.BlockSampler
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/labor/ladies_sampler.py::PoissonLadiesSampler:
+  Bases: LadiesSampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/labor/model.py::SAGE:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/labor/train_lightning.py::BatchSizeCallback:
+  Bases: Callback
+  Methods: 8
+  Attributes: 0
+
+../../examples/pytorch/labor/train_lightning.py::DataModule:
+  Bases: LightningDataModule
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/labor/train_lightning.py::SAGELightning:
+  Bases: LightningModule
+  Methods: 7
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::DocData:
+  Bases: _Dirichlet
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::EdgeData:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::Gamma:
+  Bases: collections.namedtuple('Gamma', 'concentration, rate')
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::LatentDirichletAllocation:
+  Bases:
+  Methods: 12
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::WordData:
+  Bases: _Distributed
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::_Dirichlet:
+  Bases:
+  Methods: 11
+  Attributes: 0
+
+../../examples/pytorch/lda/lda_model.py::_Distributed:
+  Bases: collections.UserList
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/line_graph/gnn.py::GNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/line_graph/gnn.py::GNNModule:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/download.py::AminerDataset:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/download.py::CustomDataset:
+  Bases: object
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/download.py::PBar:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/metapath2vec.py::Metapath2VecTrainer:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/model.py::SkipGramModel:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/reading_data.py::DataReader:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/metapath2vec/reading_data.py::Metapath2vecDataset:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/mixhop/main.py::MixHop:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/mixhop/main.py::MixHopConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::AGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::APPNP:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::ChebNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::GIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::GraphSAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::SGC:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/citation_network/models.py::TAGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/geometric/mnist.py::ChebNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/model_zoo/geometric/mnist.py::MoNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/monet/citation.py::MoNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/multigpu/multi_gpu_graph_prediction.py::GIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/multigpu/multi_gpu_graph_prediction.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/multigpu/multi_gpu_link_prediction.py::CrossEntropyLoss:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../examples/pytorch/multigpu/multi_gpu_link_prediction.py::NegativeSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/multigpu/multi_gpu_link_prediction.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/multigpu/multi_gpu_node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/graph/dataset.py::TUDataset:
+  Bases: DGLDataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/graph/model.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/graph/model.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/graph/model.py::MVGRL:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/node/model.py::Discriminator:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/node/model.py::LogReg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/mvgrl/node/model.py::MVGRL:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/node2vec/model.py::Node2vec:
+  Bases: nn.Module
+  Methods: 7
+  Attributes: 0
+
+../../examples/pytorch/node2vec/model.py::Node2vecModel:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/ogb/cluster-gat/main.py::GAT:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/cluster-gat/sampler.py::ClusterIter:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/cluster-sage/main.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/cluster-sage/sampler.py::ClusterIter:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/ogb/deepwalk/deepwalk.py::DeepwalkTrainer:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/ogb/deepwalk/model.py::SkipGramModel:
+  Bases: nn.Module
+  Methods: 14
+  Attributes: 0
+
+../../examples/pytorch/ogb/deepwalk/reading_data.py::DeepwalkDataset:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/deepwalk/reading_data.py::DeepwalkSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::DGNLayer:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::DGNNet:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::FCLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::MLPReadout:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::PCBADataset:
+  Bases: Dataset
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/directional_GSN/main.py::Subset:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/line/line.py::LineTrainer:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/ogb/line/model.py::SkipGramModel:
+  Bases: nn.Module
+  Methods: 14
+  Attributes: 0
+
+../../examples/pytorch/ogb/line/reading_data.py::EdgeSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/line/reading_data.py::LineDataset:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn/main.py::GCN:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn/main.py::LinkPredictor:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn/main.py::Logger:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn/main.py::NGNN_GCNConv:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn/main.py::NGNN_SAGEConv:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn/main.py::SAGE:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn_seal/main.py::SEALOGBLDataset:
+  Bases: Dataset
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn_seal/models.py::DGCNN:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn_seal/models.py::NGNN_GCNConv:
+  Bases: torch.nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ngnn_seal/utils.py::Logger:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-arxiv/models.py::ElementWiseLinear:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-arxiv/models.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-arxiv/models.py::GATConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-arxiv/models.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-mag/hetero_rgcn.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-mag/hetero_rgcn.py::Logger:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-mag/hetero_rgcn.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-products/gat/main.py::GAT:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-products/gat/models.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-products/gat/models.py::GATConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-products/gat/models.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-products/graphsage/main.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-products/mlp/models.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-proteins/models.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-proteins/models.py::GATConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-proteins/models.py::MWEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-proteins/models.py::MWE_DGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-proteins/models.py::MWE_GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/ogbn-proteins/utils.py::Logger:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/seal_ogbl/main.py::DGCNN:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb/seal_ogbl/main.py::Logger:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/seal_ogbl/main.py::SealSampler:
+  Bases: Sampler
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/sign/sign.py::FeedForwardNet:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb/sign/sign.py::SIGN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/MAG240M/train.py::ExternalNodeCollator:
+  Bases: dgl.dataloading.NodeCollator
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/MAG240M/train.py::RGAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/MAG240M/train_multi_gpus.py::ExternalNodeCollator:
+  Bases: dgl.dataloading.NodeCollator
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/MAG240M/train_multi_gpus.py::RGAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/PCQM4M/conv.py::GCNConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/PCQM4M/conv.py::GINConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/PCQM4M/conv.py::GNN_node:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/PCQM4M/conv.py::GNN_node_Virtualnode:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/PCQM4M/gnn.py::GNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/ogb_lsc/PCQM4M/test_inference.py::OnTheFlyPCQMDataset:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogc/ogc.py::OGC:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/ogc/utils.py::LinearNeuralNetwork:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pinsage/builder.py::PandasGraphBuilder:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pinsage/evaluation.py::LatestNNRecommender:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pinsage/layers.py::BagOfWords:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pinsage/layers.py::ItemToItemScorer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pinsage/layers.py::LinearProjector:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pinsage/layers.py::SAGENet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pinsage/layers.py::WeightedSAGEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pinsage/model.py::PinSAGEModel:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pinsage/model_sparse.py::PinSAGEModel:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pinsage/sampler.py::ItemToItemBatchSampler:
+  Bases: IterableDataset
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pinsage/sampler.py::NeighborSampler:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pinsage/sampler.py::PinSAGECollator:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/ModelNetDataLoader.py::ModelNetDataLoader:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::BiConv2d:
+  Bases: torch.nn.Conv2d
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::BiLinear:
+  Bases: torch.nn.Linear
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::BiLinearLSR:
+  Bases: torch.nn.Linear
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::BinaryQuantize:
+  Bases: Function
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::FixedRadiusNNGraph:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::FixedRadiusNearNeighbors:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/basic.py::RelativePositionMessage:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet2.py::BiPointNet2SSGCls:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet2.py::BiPointNetConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet2.py::BiSAModule:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet_cls.py::BiPointNetCls:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet_cls.py::Conv1d:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet_cls.py::EmaMaxPool:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/bipointnet/bipointnet_cls.py::TransformNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/edgeconv/model.py::Model:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/edgeconv/modelnet.py::ModelNet:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/edgeconv/modelnet.py::ModelNetDataset:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/ModelNetDataLoader.py::ModelNetDataLoader:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/ShapeNet.py::ShapeNet:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/ShapeNet.py::ShapeNetDataset:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/helper.py::KNNConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/helper.py::KNNGraphBuilder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/helper.py::KNNMessage:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/helper.py::KNearNeighbors:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/helper.py::TransitionDown:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/pct.py::PCTPositionEmbedding:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/pct.py::PartSegLoss:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/pct.py::PointTransformerCLS:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/pct.py::PointTransformerSeg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/pct.py::SALayerCLS:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pct/pct.py::SALayerSeg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/ModelNetDataLoader.py::ModelNetDataLoader:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/ShapeNet.py::ShapeNet:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/ShapeNet.py::ShapeNetDataset:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::FeaturePropagation:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::KNNConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::KNNGraphBuilder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::KNearNeighbors:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::RelativePositionMessage:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::SwapAxes:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::TransitionDown:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/helper.py::TransitionUp:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/point_transformer.py::PartSegLoss:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/point_transformer.py::PointTransformer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/point_transformer.py::PointTransformerBlock:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/point_transformer.py::PointTransformerCLS:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/point_transformer/point_transformer.py::PointTransformerSeg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/ModelNetDataLoader.py::ModelNetDataLoader:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/ShapeNet.py::ShapeNet:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/ShapeNet.py::ShapeNetDataset:
+  Bases: Dataset
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::FixedRadiusNNGraph:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::FixedRadiusNearNeighbors:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::PointNet2FP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::PointNet2MSGCls:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::PointNet2SSGCls:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::PointNetConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::RelativePositionMessage:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::SAMSGModule:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2.py::SAModule:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2_partseg.py::PointNet2MSGPartSeg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet2_partseg.py::PointNet2SSGPartSeg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet_cls.py::PointNetCls:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet_cls.py::TransformNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet_partseg.py::PartSegLoss:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet_partseg.py::PointNetPartSeg:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/pointcloud/pointnet/pointnet_partseg.py::TransformNet:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rect/classify.py::LogisticRegressionClassifier:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rect/model.py::GCN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/rect/model.py::RECT_L:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/rgat/train.py::HeteroGAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn-hetero/model.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/rgcn-hetero/model.py::EntityClassify_HeteroAPI:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/rgcn-hetero/model.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn-hetero/model.py::RelGraphConvLayerHeteroAPI:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn-hetero/model.py::RelGraphEmbed:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/entity.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/entity_sample.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/entity_sample_multi_gpu.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/experimental/entity_classify_dist.py::DistEmbedLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/experimental/entity_classify_dist.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/experimental/entity_classify_dist.py::RelGraphConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/link.py::GlobalUniform:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/link.py::LinkPredict:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../examples/pytorch/rgcn/link.py::NegativeSampler:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/link.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rgcn/link.py::SubgraphIterator:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/rgcn/model.py::RGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rrn/rrn.py::RRN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/rrn/rrn.py::RRNLayer:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/rrn/sudoku.py::SudokuNN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/rrn/sudoku_data.py::ListDataset:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/sagpool/layer.py::ConvPoolBlock:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/sagpool/layer.py::SAGPool:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/sagpool/network.py::SAGNetworkGlobal:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/sagpool/network.py::SAGNetworkHierarchical:
+  Bases: torch.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/seal/logger.py::LightLogging:
+  Bases: object
+  Methods: 6
+  Attributes: 0
+
+../../examples/pytorch/seal/model.py::DGCNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/seal/model.py::GCN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/seal/sampler.py::EdgeDataSet:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/seal/sampler.py::GraphDataSet:
+  Bases: Dataset
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/seal/sampler.py::PosNegEdgesGenerator:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/seal/sampler.py::SEALData:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/seal/sampler.py::SEALSampler:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/sign/sign.py::FeedForwardNet:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/sign/sign.py::Model:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/stgcn_wave/model.py::FullyConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/stgcn_wave/model.py::OutputLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/stgcn_wave/model.py::STGCN_WAVE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/stgcn_wave/model.py::SpatioConvLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/stgcn_wave/model.py::TemporalConvLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/tagcn/tagcn.py::TAGCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/tree_lstm/tree_lstm.py::ChildSumTreeLSTMCell:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/tree_lstm/tree_lstm.py::TreeLSTM:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/tree_lstm/tree_lstm.py::TreeLSTMCell:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/vgae/model.py::VGAEModel:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../examples/pytorch/vrgcn/train_cv.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/vrgcn/train_cv.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/vrgcn/train_cv.py::SAGEConvWithCV:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/vrgcn/train_cv_multi_gpu.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../examples/pytorch/vrgcn/train_cv_multi_gpu.py::SAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/pytorch/vrgcn/train_cv_multi_gpu.py::SAGEConvWithCV:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/sparse/appnp.py::APPNP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/gat.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/gat.py::GATConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/sparse/gcn.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/gcnii.py::GCNII:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/gcnii.py::GCNIIConvolution:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/graph_transformer.py::GTLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/graph_transformer.py::GTModel:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/graph_transformer.py::SparseMHA:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/han.py::GATConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/sparse/han.py::HAN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/han.py::SemanticAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/hetero-rgcn.py::EntityClassify:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/hetero-rgcn.py::HeteroRelationalGraphConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/hetero-rgcn.py::RelGraphEmbed:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/hgnn.py::HGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/hypergraphatt.py::HypergraphAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/hypergraphatt.py::Net:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/sampling/graphsage.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/sampling/graphsage.py::SAGEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/sparse/sampling/ladies.py::LADIES:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/sampling/ladies.py::SAGEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../examples/sparse/sign.py::SIGN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/twirls.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/twirls.py::TWIRLS:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/sparse/twirls.py::TWIRLSWithAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/dgi/dgi.py::Classifier:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/dgi/dgi.py::DGI:
+  Bases: tf.keras.Model
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/dgi/dgi.py::Discriminator:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/dgi/dgi.py::Encoder:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/dgi/gcn.py::GCN:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/gat/gat.py::GAT:
+  Bases: tf.keras.Model
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/gat/utils.py::EarlyStopping:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../examples/tensorflow/gcn/gcn.py::GCN:
+  Bases: tf.keras.Model
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/gcn/gcn_builtin.py::GCN:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/gcn/gcn_builtin.py::GCNLayer:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/gcn/gcn_mp.py::GCN:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/gcn/gcn_mp.py::GCNLayer:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../examples/tensorflow/rgcn/entity_classify.py::EntityClassify:
+  Bases: BaseRGCN
+  Methods: 4
+  Attributes: 0
+
+../../examples/tensorflow/rgcn/model.py::BaseRGCN:
+  Bases: layers.Layer
+  Methods: 6
+  Attributes: 0
+
+../../examples/tensorflow/sgc/sgc.py::SGC:
+  Bases: tf.keras.Model
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/_ffi/_ctypes/function.py::FunctionBase:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/_ffi/_ctypes/ndarray.py::NDArrayBase:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/_ffi/_ctypes/object.py::ObjectBase:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/_ffi/_ctypes/types.py::DGLValue:
+  Bases: ctypes.Union
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/_ffi/base.py::DGLError:
+  Bases: Exception
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/_ffi/function.py::Function:
+  Bases: _FunctionBase
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/_ffi/function.py::ModuleBase:
+  Bases: object
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/_ffi/ndarray.py::NDArrayBase:
+  Bases: _NDArrayBase
+  Methods: 17
+  Attributes: 0
+
+../../python/dgl/_ffi/object.py::ObjectBase:
+  Bases: _ObjectBase
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/_ffi/object_generic.py::ObjectGeneric:
+  Bases: object
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/_ffi/runtime_ctypes.py::DGLArray:
+  Bases: ctypes.Structure
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/_ffi/runtime_ctypes.py::DGLByteArray:
+  Bases: ctypes.Structure
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/_ffi/runtime_ctypes.py::DGLContext:
+  Bases: ctypes.Structure
+  Methods: 16
+  Attributes: 0
+
+../../python/dgl/_ffi/runtime_ctypes.py::DGLDataType:
+  Bases: ctypes.Structure
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/_ffi/runtime_ctypes.py::TypeCode:
+  Bases: object
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/backend/backend.py::NodeEmbedding:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/backend.py::no_grad:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/backend.py::record_grad:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::CSRMM:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::CSRMask:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::CSRSum:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::EdgeSoftmax:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::GSDDMM:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::GSpMM:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::ScatterAdd:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/sparse.py::SegmentReduce:
+  Bases: mx.autograd.Function
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/mxnet/tensor.py::no_grad:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::CSRMM:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::CSRMask:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::CSRSum:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::EdgeSoftmax:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::EdgeSoftmax_hetero:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::GATHERMM:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::GSDDMM:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::GSDDMM_hetero:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::GSpMM:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::GSpMM_hetero:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::SEGMENTMM:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::ScatterAdd:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::SegmentReduce:
+  Bases: th.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/sparse.py::empty_context:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/pytorch/tensor.py::record_grad:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/backend/tensorflow/tensor.py::GradContext:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/backend/tensorflow/tensor.py::record_grad:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/base.py::DGLWarning:
+  Bases: UserWarning
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/container.py::List:
+  Bases: ObjectBase
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/container.py::Map:
+  Bases: ObjectBase
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/container.py::StrMap:
+  Bases: Map
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/container.py::Value:
+  Bases: ObjectBase
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/cuda/gpu_cache.py::GPUCache:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/data/actor.py::ActorDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/adapter.py::AsGraphPredDataset:
+  Bases: DGLDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/adapter.py::AsLinkPredDataset:
+  Bases: DGLDataset
+  Methods: 11
+  Attributes: 0
+
+../../python/dgl/data/adapter.py::AsNodePredDataset:
+  Bases: DGLDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/bitcoinotc.py::BitcoinOTCDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/data/citation_graph.py::CitationGraphDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/data/citation_graph.py::CiteseerGraphDataset:
+  Bases: CitationGraphDataset
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/citation_graph.py::CoraBinary:
+  Bases: DGLBuiltinDataset
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/data/citation_graph.py::CoraGraphDataset:
+  Bases: CitationGraphDataset
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/citation_graph.py::PubmedGraphDataset:
+  Bases: CitationGraphDataset
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/cluster.py::CLUSTERDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset.py::CSVDataset:
+  Bases: DGLDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::BaseData:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::DGLGraphConstructor:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::DefaultDataParser:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::EdgeData:
+  Bases: BaseData
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::GraphData:
+  Bases: BaseData
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::MetaEdge:
+  Bases: dt.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::MetaGraph:
+  Bases: dt.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::MetaNode:
+  Bases: dt.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::MetaYaml:
+  Bases: dt.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/data/csv_dataset_base.py::NodeData:
+  Bases: BaseData
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/dgl_dataset.py::DGLBuiltinDataset:
+  Bases: DGLDataset
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/dgl_dataset.py::DGLDataset:
+  Bases: object
+  Methods: 21
+  Attributes: 0
+
+../../python/dgl/data/fakenews.py::FakeNewsDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 11
+  Attributes: 0
+
+../../python/dgl/data/flickr.py::FlickrDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/fraud.py::FraudAmazonDataset:
+  Bases: FraudDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/fraud.py::FraudDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/fraud.py::FraudYelpDataset:
+  Bases: FraudDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/gdelt.py::GDELTDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 11
+  Attributes: 0
+
+../../python/dgl/data/geom_gcn.py::ChameleonDataset:
+  Bases: GeomGCNDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/geom_gcn.py::CornellDataset:
+  Bases: GeomGCNDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/geom_gcn.py::GeomGCNDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/geom_gcn.py::SquirrelDataset:
+  Bases: GeomGCNDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/geom_gcn.py::TexasDataset:
+  Bases: GeomGCNDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/geom_gcn.py::WisconsinDataset:
+  Bases: GeomGCNDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/gindt.py::GINDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::AmazonCoBuyComputerDataset:
+  Bases: GNNBenchmarkDataset
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::AmazonCoBuyPhotoDataset:
+  Bases: GNNBenchmarkDataset
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::CoauthorCSDataset:
+  Bases: GNNBenchmarkDataset
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::CoauthorPhysicsDataset:
+  Bases: GNNBenchmarkDataset
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::CoraFull:
+  Bases: CoraFullDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::CoraFullDataset:
+  Bases: GNNBenchmarkDataset
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/gnn_benchmark.py::GNNBenchmarkDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/data/graph_serialize.py::GraphData:
+  Bases: ObjectBase
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/graph_serialize.py::StorageMetaData:
+  Bases: ObjectBase
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/data/heterograph_serialize.py::HeteroGraphData:
+  Bases: ObjectBase
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/heterophilous_graphs.py::AmazonRatingsDataset:
+  Bases: HeterophilousGraphDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/heterophilous_graphs.py::HeterophilousGraphDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/heterophilous_graphs.py::MinesweeperDataset:
+  Bases: HeterophilousGraphDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/heterophilous_graphs.py::QuestionsDataset:
+  Bases: HeterophilousGraphDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/heterophilous_graphs.py::RomanEmpireDataset:
+  Bases: HeterophilousGraphDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/heterophilous_graphs.py::TolokersDataset:
+  Bases: HeterophilousGraphDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/icews18.py::ICEWS18Dataset:
+  Bases: DGLBuiltinDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/karate.py::KarateClubDataset:
+  Bases: DGLDataset
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/data/knowledge_graph.py::FB15k237Dataset:
+  Bases: KnowledgeGraphDataset
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/knowledge_graph.py::FB15kDataset:
+  Bases: KnowledgeGraphDataset
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/knowledge_graph.py::KnowledgeGraphDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/data/knowledge_graph.py::WN18Dataset:
+  Bases: KnowledgeGraphDataset
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/lrgb.py::COCOSuperpixelsDataset:
+  Bases: DGLDataset
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/data/lrgb.py::PeptidesFunctionalDataset:
+  Bases: DGLDataset
+  Methods: 16
+  Attributes: 0
+
+../../python/dgl/data/lrgb.py::PeptidesStructuralDataset:
+  Bases: DGLDataset
+  Methods: 15
+  Attributes: 0
+
+../../python/dgl/data/lrgb.py::VOCSuperpixelsDataset:
+  Bases: DGLDataset
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/data/minigc.py::MiniGCDataset:
+  Bases: DGLDataset
+  Methods: 17
+  Attributes: 0
+
+../../python/dgl/data/movielens.py::MovieLensDataset:
+  Bases: DGLDataset
+  Methods: 21
+  Attributes: 0
+
+../../python/dgl/data/pattern.py::PATTERNDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/ppi.py::LegacyPPIDataset:
+  Bases: PPIDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/ppi.py::PPIDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/data/qm7b.py::QM7bDataset:
+  Bases: DGLDataset
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/data/qm9.py::QM9Dataset:
+  Bases: DGLDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/qm9_edge.py::QM9EdgeDataset:
+  Bases: DGLDataset
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::AIFBDataset:
+  Bases: RDFGraphDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::AMDataset:
+  Bases: RDFGraphDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::BGSDataset:
+  Bases: RDFGraphDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::Entity:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::MUTAGDataset:
+  Bases: RDFGraphDataset
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::RDFGraphDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 19
+  Attributes: 0
+
+../../python/dgl/data/rdf.py::Relation:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/data/reddit.py::RedditDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/sbm.py::SBMMixtureDataset:
+  Bases: DGLDataset
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/data/superpixel.py::CIFAR10SuperPixelDataset:
+  Bases: SuperPixelDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/superpixel.py::MNISTSuperPixelDataset:
+  Bases: SuperPixelDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/data/superpixel.py::SuperPixelDataset:
+  Bases: DGLDataset
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/data/synthetic.py::BA2MotifDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/data/synthetic.py::BACommunityDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/synthetic.py::BAShapeDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/synthetic.py::TreeCycleDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/synthetic.py::TreeGridDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/data/tree.py::SSTDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 14
+  Attributes: 0
+
+../../python/dgl/data/tu.py::LegacyTUDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 14
+  Attributes: 0
+
+../../python/dgl/data/tu.py::TUDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 14
+  Attributes: 0
+
+../../python/dgl/data/utils.py::Subset:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/data/wikics.py::WikiCSDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/yelp.py::YelpDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/data/zinc.py::ZINCDataset:
+  Bases: DGLBuiltinDataset
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/dataloading/base.py::BlockSampler:
+  Bases: Sampler
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/dataloading/base.py::EdgePredictionSampler:
+  Bases: Sampler
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/dataloading/base.py::Sampler:
+  Bases: object
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/capped_neighbor_sampler.py::CappedNeighborSampler:
+  Bases: Sampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/cluster_gcn.py::ClusterGCNSampler:
+  Bases: Sampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::CollateWrapper:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::DDPTensorizedDataset:
+  Bases: torch.utils.data.IterableDataset
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::DataLoader:
+  Bases: torch.utils.data.DataLoader
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::DistDataLoader:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::DistEdgeDataLoader:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::DistNodeDataLoader:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::EdgeCollator:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::GraphCollator:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::GraphDataLoader:
+  Bases: torch.utils.data.DataLoader
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::NodeCollator:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::TensorizedDataset:
+  Bases: torch.utils.data.IterableDataset
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::WorkerInitWrapper:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::_PrefetchedGraphFeatures:
+  Bases: object
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::_PrefetchingIter:
+  Bases: object
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/dataloading/dataloader.py::_TensorizedDatasetIter:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/dataloading/graphsaint.py::SAINTSampler:
+  Bases: Sampler
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/dataloading/labor_sampler.py::LaborSampler:
+  Bases: BlockSampler
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/dataloading/negative_sampler.py::GlobalUniform:
+  Bases: _BaseNegativeSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/negative_sampler.py::PerSourceUniform:
+  Bases: _BaseNegativeSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/negative_sampler.py::_BaseNegativeSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/neighbor_sampler.py::MultiLayerFullNeighborSampler:
+  Bases: NeighborSampler
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/dataloading/neighbor_sampler.py::NeighborSampler:
+  Bases: BlockSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/shadow.py::ShaDowKHopSampler:
+  Bases: Sampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/dataloading/spot_target.py::SpotTarget:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/distributed/dist_context.py::CustomPool:
+  Bases:
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/distributed/dist_context.py::MpCommand:
+  Bases: Enum
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/distributed/dist_dataloader.py::Collator:
+  Bases: ABC
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_dataloader.py::DistDataLoader:
+  Bases:
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/distributed/dist_dataloader.py::DistEdgeDataLoader:
+  Bases: DistDataLoader
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/distributed/dist_dataloader.py::DistNodeDataLoader:
+  Bases: DistDataLoader
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/distributed/dist_dataloader.py::EdgeCollator:
+  Bases: Collator
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/distributed/dist_dataloader.py::NodeCollator:
+  Bases: Collator
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::AddEdgeAttributeFromKVRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::AddEdgeAttributeFromKVResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::AddEdgeAttributeFromSharedMemRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::AddEdgeAttributeFromSharedMemResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::DistGraph:
+  Bases:
+  Methods: 40
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::DistGraphServer:
+  Bases: KVServer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::EdgeDataView:
+  Bases: MutableMapping
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::HeteroEdgeView:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::HeteroNodeView:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::InitGraphRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::InitGraphResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::NodeDataView:
+  Bases: MutableMapping
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::QueryIfUseGraphBoltRequest:
+  Bases: rpc.Request
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_graph.py::QueryIfUseGraphBoltResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/dist_tensor.py::DistTensor:
+  Bases:
+  Methods: 16
+  Attributes: 0
+
+../../python/dgl/distributed/graph_partition_book.py::EdgePartitionPolicy:
+  Bases: PartitionPolicy
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/distributed/graph_partition_book.py::GraphPartitionBook:
+  Bases: ABC
+  Methods: 19
+  Attributes: 0
+
+../../python/dgl/distributed/graph_partition_book.py::HeteroDataName:
+  Bases: object
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/distributed/graph_partition_book.py::NodePartitionPolicy:
+  Bases: PartitionPolicy
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/distributed/graph_partition_book.py::PartitionPolicy:
+  Bases: object
+  Methods: 11
+  Attributes: 0
+
+../../python/dgl/distributed/graph_partition_book.py::RangePartitionBook:
+  Bases: GraphPartitionBook
+  Methods: 25
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::EdgesRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::FindEdgeResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::InDegreeRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::InDegreeResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::InSubgraphRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::OutDegreeRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::OutDegreeResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::SamplingRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::SamplingRequestEtype:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/graph_services.py::SubgraphResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/id_map.py::IdMap:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::BarrierRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::BarrierResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::CountLocalNonzeroRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::CountLocalNonzeroResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::DeleteDataRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::DeleteDataResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::GetPartShapeRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::GetPartShapeResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::GetSharedDataRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::GetSharedDataResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::InitDataRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::InitDataResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::KVClient:
+  Bases: object
+  Methods: 23
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::KVServer:
+  Bases: object
+  Methods: 15
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::PullRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::PullResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::PushRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::RegisterPullHandlerRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::RegisterPullHandlerResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::RegisterPushHandlerRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::RegisterPushHandlerResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::SendMetaToBackupRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/kvstore.py::SendMetaToBackupResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/nn/pytorch/sparse_emb.py::DistEmbedding:
+  Bases:
+  Methods: 11
+  Attributes: 0
+
+../../python/dgl/distributed/optim/pytorch/sparse_optim.py::DistSparseGradOptimizer:
+  Bases: abc.ABC
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/distributed/optim/pytorch/sparse_optim.py::SparseAdagrad:
+  Bases: DistSparseGradOptimizer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/distributed/optim/pytorch/sparse_optim.py::SparseAdam:
+  Bases: DistSparseGradOptimizer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/distributed/role.py::GetRoleRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/role.py::GetRoleResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/role.py::RegisterRoleRequest:
+  Bases: rpc.Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/role.py::RegisterRoleResponse:
+  Bases: rpc.Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::ClientBarrierRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::ClientBarrierResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::ClientRegisterRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::ClientRegisterResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::DistConnectError:
+  Bases: DGLError
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::GetNumberClientsRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::GetNumberClientsResponse:
+  Bases: Response
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::PlaceHolder:
+  Bases:
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::RPCMessage:
+  Bases: ObjectBase
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::Request:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::Response:
+  Bases:
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/distributed/rpc.py::ShutDownRequest:
+  Bases: Request
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/distributed/server_state.py::ServerState:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/distributed/standalone_kvstore.py::KVClient:
+  Bases: object
+  Methods: 18
+  Attributes: 0
+
+../../python/dgl/frame.py::Column:
+  Bases: TensorStorage
+  Methods: 24
+  Attributes: 0
+
+../../python/dgl/frame.py::Frame:
+  Bases: MutableMapping
+  Methods: 35
+  Attributes: 0
+
+../../python/dgl/frame.py::LazyFeature:
+  Bases: object
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/frame.py::Scheme:
+  Bases: namedtuple('Scheme', ['shape', 'dtype'])
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/frame.py::_LazyIndex:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/function/base.py::BuiltinFunction:
+  Bases: object
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/function/base.py::TargetCode:
+  Bases: object
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/function/message.py::BinaryMessageFunction:
+  Bases: MessageFunction
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/function/message.py::CopyMessageFunction:
+  Bases: MessageFunction
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/function/message.py::MessageFunction:
+  Bases: BuiltinFunction
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/function/reducer.py::ReduceFunction:
+  Bases: BuiltinFunction
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/function/reducer.py::SimpleReduceFunction:
+  Bases: ReduceFunction
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graph_index.py::BoolFlag:
+  Bases: object
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graph_index.py::GraphIndex:
+  Bases: ObjectBase
+  Methods: 52
+  Attributes: 0
+
+../../python/dgl/graph_index.py::SubgraphIndex:
+  Bases: ObjectBase
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/graphbolt/base.py::Bufferer:
+  Bases: IterDataPipe
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/base.py::CSCFormatBase:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/base.py::CopyTo:
+  Bases: IterDataPipe
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/base.py::EndMarker:
+  Bases: IterDataPipe
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/base.py::Waiter:
+  Bases: IterDataPipe
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/dataloader.py::DataLoader:
+  Bases: MiniBatchTransformer
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/dataloader.py::MultiprocessingWrapper:
+  Bases: torch_data.IterDataPipe
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/datapipes/utils.py::PrefetcherIterDataPipe:
+  Bases: IterDataPipe
+  Methods: 11
+  Attributes: 0
+
+../../python/dgl/graphbolt/datapipes/utils.py::_PrefetchData:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/datapipes/visualization.py::Node:
+  Bases:
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/graphbolt/dataset.py::Dataset:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/dataset.py::Task:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/graphbolt/external_utils.py::SeedEdgesExcluder:
+  Bases: MiniBatchTransformer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/feature_fetcher.py::FeatureFetcher:
+  Bases: MiniBatchTransformer
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/feature_fetcher.py::FeatureFetcherStartMarker:
+  Bases: MiniBatchTransformer
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/feature_fetcher.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/feature_store.py::Feature:
+  Bases:
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/graphbolt/feature_store.py::FeatureKey:
+  Bases: NamedTuple
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/feature_store.py::FeatureStore:
+  Bases:
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/basic_feature_store.py::BasicFeatureStore:
+  Bases: FeatureStore
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/cooperative_conv.py::CooperativeConv:
+  Bases: torch.nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/cooperative_conv.py::CooperativeConvFunction:
+  Bases: torch.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/cpu_cached_feature.py::CPUCachedFeature:
+  Bases: Feature
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/cpu_cached_feature.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/cpu_feature_cache.py::CPUFeatureCache:
+  Bases: object
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/fused_csc_sampling_graph.py::FusedCSCSamplingGraph:
+  Bases: SamplingGraph
+  Methods: 37
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/fused_csc_sampling_graph.py::_SampleNeighborsWaiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/gpu_cached_feature.py::GPUCachedFeature:
+  Bases: Feature
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/gpu_cached_feature.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/gpu_feature_cache.py::GPUFeatureCache:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/gpu_feature_cache.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/gpu_graph_cache.py::GPUGraphCache:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/in_subgraph_sampler.py::InSubgraphSampler:
+  Bases: SubgraphSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/legacy_dataset.py::LegacyDataset:
+  Bases: Dataset
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::CombineCachedAndFetchedInSubgraph:
+  Bases: Mapper
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::CompactPerLayer:
+  Bases: MiniBatchTransformer
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::FetchCachedInsubgraphData:
+  Bases: Mapper
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::FetchInsubgraphData:
+  Bases: MiniBatchTransformer
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::LayerNeighborSampler:
+  Bases: NeighborSamplerImpl
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::NeighborSampler:
+  Bases: NeighborSamplerImpl
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::NeighborSamplerImpl:
+  Bases: SubgraphSampler
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/neighbor_sampler.py::SamplePerLayer:
+  Bases: MiniBatchTransformer
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_dataset.py::BuiltinDataset:
+  Bases: OnDiskDataset
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_dataset.py::OnDiskDataset:
+  Bases: Dataset
+  Methods: 14
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_dataset.py::OnDiskTask:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::ExtraMetaData:
+  Bases: pydantic.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskFeatureData:
+  Bases: ExtraMetaData
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskFeatureDataDomain:
+  Bases: str, Enum
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskFeatureDataFormat:
+  Bases: str, Enum
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskGraphTopology:
+  Bases: pydantic.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskGraphTopologyType:
+  Bases: str, Enum
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskMetaData:
+  Bases: pydantic.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskTVTSet:
+  Bases: pydantic.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskTVTSetData:
+  Bases: pydantic.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/ondisk_metadata.py::OnDiskTaskData:
+  Bases: ExtraMetaData
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/sampled_subgraph_impl.py::SampledSubgraphImpl:
+  Bases: SampledSubgraph
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/temporal_neighbor_sampler.py::TemporalLayerNeighborSampler:
+  Bases: TemporalNeighborSamplerImpl
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/temporal_neighbor_sampler.py::TemporalNeighborSampler:
+  Bases: TemporalNeighborSamplerImpl
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/temporal_neighbor_sampler.py::TemporalNeighborSamplerImpl:
+  Bases: SubgraphSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/torch_based_feature_store.py::DiskBasedFeature:
+  Bases: Feature
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/torch_based_feature_store.py::TorchBasedFeature:
+  Bases: Feature
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/torch_based_feature_store.py::TorchBasedFeatureStore:
+  Bases: BasicFeatureStore
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/torch_based_feature_store.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/impl/uniform_negative_sampler.py::UniformNegativeSampler:
+  Bases: NegativeSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/internal/sample_utils.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/internal_utils.py::GBWarning:
+  Bases: UserWarning
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/item_sampler.py::DistributedItemSampler:
+  Bases: ItemSampler
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/item_sampler.py::ItemSampler:
+  Bases: IterDataPipe
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/itemset.py::HeteroItemSet:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/itemset.py::ItemSet:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/graphbolt/itemset.py::ItemSetDict:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/graphbolt/minibatch.py::MiniBatch:
+  Bases:
+  Methods: 12
+  Attributes: 0
+
+../../python/dgl/graphbolt/minibatch_transformer.py::MiniBatchTransformer:
+  Bases: Mapper
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/graphbolt/negative_sampler.py::NegativeSampler:
+  Bases: MiniBatchTransformer
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/graphbolt/sampled_subgraph.py::PyGLayerData:
+  Bases: NamedTuple
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/sampled_subgraph.py::PyGLayerHeteroData:
+  Bases: NamedTuple
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/graphbolt/sampled_subgraph.py::SampledSubgraph:
+  Bases:
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/graphbolt/sampled_subgraph.py::_ExcludeEdgesWaiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/sampling_graph.py::SamplingGraph:
+  Bases:
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/graphbolt/subgraph_sampler.py::SubgraphSampler:
+  Bases: MiniBatchTransformer
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/graphbolt/subgraph_sampler.py::_NoOpWaiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/graphbolt/subgraph_sampler.py::_Waiter:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/heterograph.py::DGLBlock:
+  Bases: DGLGraph
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/heterograph.py::DGLGraph:
+  Bases: object
+  Methods: 105
+  Attributes: 0
+
+../../python/dgl/heterograph_index.py::FlattenedHeteroGraph:
+  Bases: ObjectBase
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/heterograph_index.py::HeteroGraphIndex:
+  Bases: ObjectBase
+  Methods: 53
+  Attributes: 0
+
+../../python/dgl/heterograph_index.py::HeteroPickleStates:
+  Bases: ObjectBase
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/heterograph_index.py::HeteroSubgraphIndex:
+  Bases: ObjectBase
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/multiprocessing/pytorch.py::Process:
+  Bases: mp.Process
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/ndarray.py::NDArray:
+  Bases: NDArrayBase
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/ndarray.py::SparseFormat:
+  Bases:
+  Methods: 0
+  Attributes: 0
+
+../../python/dgl/ndarray.py::SparseMatrix:
+  Bases: ObjectBase
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/agnnconv.py::AGNNConv:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/appnpconv.py::APPNPConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/chebconv.py::ChebConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/densechebconv.py::DenseChebConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/densegraphconv.py::DenseGraphConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/densesageconv.py::DenseSAGEConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/edgeconv.py::EdgeConv:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/gatconv.py::GATConv:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/gatedgraphconv.py::GatedGraphConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/ginconv.py::GINConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/gmmconv.py::GMMConv:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/graphconv.py::GraphConv:
+  Bases: gluon.Block
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/nnconv.py::NNConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/relgraphconv.py::RelGraphConv:
+  Bases: gluon.Block
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/sageconv.py::SAGEConv:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/sgconv.py::SGConv:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/conv/tagconv.py::TAGConv:
+  Bases: gluon.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/glob.py::AvgPooling:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/glob.py::GlobalAttentionPooling:
+  Bases: nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/glob.py::MaxPooling:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/glob.py::Set2Set:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/glob.py::SortPooling:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/glob.py::SumPooling:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/hetero.py::HeteroGraphConv:
+  Bases: nn.Block
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/mxnet/utils.py::Sequential:
+  Bases: gluon.nn.Sequential
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/agnnconv.py::AGNNConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/appnpconv.py::APPNPConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/atomicconv.py::AtomicConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/atomicconv.py::RadialPooling:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/cfconv.py::CFConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/cfconv.py::ShiftedSoftplus:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/chebconv.py::ChebConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/cugraph_base.py::CuGraphBaseConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/cugraph_gatconv.py::CuGraphGATConv:
+  Bases: CuGraphBaseConv
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/cugraph_relgraphconv.py::CuGraphRelGraphConv:
+  Bases: CuGraphBaseConv
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/cugraph_sageconv.py::CuGraphSAGEConv:
+  Bases: CuGraphBaseConv
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/densechebconv.py::DenseChebConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/densegraphconv.py::DenseGraphConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/densesageconv.py::DenseSAGEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/dgnconv.py::DGNConv:
+  Bases: PNAConv
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/dgnconv.py::DGNConvTower:
+  Bases: PNAConvTower
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/dotgatconv.py::DotGatConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/edgeconv.py::EdgeConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/edgegatconv.py::EdgeGATConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/egatconv.py::EGATConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/egnnconv.py::EGNNConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gatconv.py::GATConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gatedgcnconv.py::GatedGCNConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gatedgraphconv.py::GatedGraphConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gatv2conv.py::GATv2Conv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gcn2conv.py::GCN2Conv:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/ginconv.py::GINConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gineconv.py::GINEConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/gmmconv.py::GMMConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/graphconv.py::EdgeWeightNorm:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/graphconv.py::GraphConv:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/grouprevres.py::GroupRevRes:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/grouprevres.py::InvertibleCheckpoint:
+  Bases: torch.autograd.Function
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/hgtconv.py::HGTConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/nnconv.py::NNConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/pnaconv.py::PNAConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/pnaconv.py::PNAConvTower:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/relgraphconv.py::RelGraphConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/sageconv.py::SAGEConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/sgconv.py::SGConv:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/tagconv.py::TAGConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/twirlsconv.py::Attention:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/twirlsconv.py::MLP:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/twirlsconv.py::Propagate:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/twirlsconv.py::PropagateNoPrecond:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/twirlsconv.py::TWIRLSConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/conv/twirlsconv.py::TWIRLSUnfoldingAndAttention:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/gnnexplainer.py::GNNExplainer:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/gnnexplainer.py::HeteroGNNExplainer:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/pgexplainer.py::HeteroPGExplainer:
+  Bases: PGExplainer
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/pgexplainer.py::PGExplainer:
+  Bases: nn.Module
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/subgraphx.py::HeteroSubgraphX:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/subgraphx.py::MCTSNode:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/explain/subgraphx.py::SubgraphX:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/factory.py::KNNGraph:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/factory.py::RadiusGraph:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/factory.py::SegmentedKNNGraph:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::AvgPooling:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::GlobalAttentionPooling:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::InducedSetAttentionBlock:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::MaxPooling:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::MultiHeadAttention:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::PMALayer:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::Set2Set:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::SetAttentionBlock:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::SetTransformerDecoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::SetTransformerEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::SortPooling:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::SumPooling:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/glob.py::WeightAndSum:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/biased_mha.py::BiasedMHA:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/degree_encoder.py::DegreeEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/egt.py::EGTLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/graphormer.py::GraphormerLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/lap_pos_encoder.py::LapPosEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/path_encoder.py::PathEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/spatial_encoder.py::SpatialEncoder:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/gt/spatial_encoder.py::SpatialEncoder3d:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/hetero.py::HeteroEmbedding:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/hetero.py::HeteroGraphConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/hetero.py::HeteroLinear:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/linear.py::TypedLinear:
+  Bases: nn.Module
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/link/edgepred.py::EdgePredictor:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/link/transe.py::TransE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/link/transr.py::TransR:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/network_emb.py::DeepWalk:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/network_emb.py::MetaPath2Vec:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/sparse_emb.py::NodeEmbedding:
+  Bases:
+  Methods: 19
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/utils.py::Identity:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/utils.py::JumpingKnowledge:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/utils.py::LabelPropagation:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/utils.py::Sequential:
+  Bases: nn.Sequential
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/pytorch/utils.py::WeightBasis:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/appnpconv.py::APPNPConv:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/chebconv.py::ChebConv:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/densechebconv.py::DenseChebConv:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/edgeconv.py::EdgeConv:
+  Bases: layers.Layer
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/gatconv.py::GATConv:
+  Bases: layers.Layer
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/ginconv.py::GINConv:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/graphconv.py::GraphConv:
+  Bases: layers.Layer
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/relgraphconv.py::RelGraphConv:
+  Bases: layers.Layer
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/sageconv.py::SAGEConv:
+  Bases: layers.Layer
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/conv/sgconv.py::SGConv:
+  Bases: layers.Layer
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/glob.py::AvgPooling:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/glob.py::GlobalAttentionPooling:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/glob.py::MaxPooling:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/glob.py::SortPooling:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/glob.py::SumPooling:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/glob.py::WeightAndSum:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/hetero.py::HeteroGraphConv:
+  Bases: layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/nn/tensorflow/utils.py::Identity:
+  Bases: layers.Layer
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/optim/pytorch/sparse_optim.py::SparseAdagrad:
+  Bases: SparseGradOptimizer
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/optim/pytorch/sparse_optim.py::SparseAdam:
+  Bases: SparseGradOptimizer
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/optim/pytorch/sparse_optim.py::SparseGradOptimizer:
+  Bases: abc.ABC
+  Methods: 13
+  Attributes: 0
+
+../../python/dgl/partition.py::NDArrayPartition:
+  Bases: object
+  Methods: 9
+  Attributes: 0
+
+../../python/dgl/sampling/pinsage.py::PinSAGESampler:
+  Bases: RandomWalkNeighborSampler
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/sampling/pinsage.py::RandomWalkNeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/sampling/utils.py::EidExcluder:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/sparse/sparse_matrix.py::SparseMatrix:
+  Bases:
+  Methods: 31
+  Attributes: 0
+
+../../python/dgl/storages/base.py::FeatureStorage:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/storages/base.py::ThreadedFuture:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/storages/base.py::_FuncWrapper:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/storages/numpy.py::NumpyStorage:
+  Bases: FeatureStorage
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/storages/pytorch_tensor.py::PyTorchTensorStorage:
+  Bases: BaseTensorStorage
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/storages/tensor.py::BaseTensorStorage:
+  Bases: FeatureStorage
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::AddEdge:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::AddMetaPaths:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::AddReverse:
+  Bases: BaseTransform
+  Methods: 5
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::AddSelfLoop:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::BaseTransform:
+  Bases:
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::Compose:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::DropEdge:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::DropNode:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::FeatMask:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::GCNNorm:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::GDC:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::HeatKernel:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::KHopGraph:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::LapPE:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::LaplacianPE:
+  Bases: LapPE
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::LineGraph:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::NodeShuffle:
+  Bases: BaseTransform
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::PPR:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::RandomWalkPE:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::RemoveSelfLoop:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::RowFeatNormalizer:
+  Bases: BaseTransform
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::SIGNDiffusion:
+  Bases: BaseTransform
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::SVDPE:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::ToLevi:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/transforms/module.py::ToSimple:
+  Bases: BaseTransform
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/udf.py::EdgeBatch:
+  Bases: object
+  Methods: 8
+  Attributes: 0
+
+../../python/dgl/udf.py::NodeBatch:
+  Bases: object
+  Methods: 7
+  Attributes: 0
+
+../../python/dgl/utils/exception.py::ExceptionWrapper:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/utils/exception.py::KeyErrorMessage:
+  Bases: str
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/utils/filter.py::Filter:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::CtxCachedObject:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::FlattenedDict:
+  Bases: object
+  Methods: 4
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::HybridDict:
+  Bases: Mapping
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::InconsistentDtypeException:
+  Bases: DGLError
+  Methods: 1
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::Index:
+  Bases: object
+  Methods: 18
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::LazyDict:
+  Bases: Mapping
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/utils/internal.py::ReadOnlyDict:
+  Bases: Mapping
+  Methods: 6
+  Attributes: 0
+
+../../python/dgl/view.py::HeteroEdgeDataView:
+  Bases: MutableMapping
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/view.py::HeteroEdgeView:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/dgl/view.py::HeteroNodeDataView:
+  Bases: MutableMapping
+  Methods: 10
+  Attributes: 0
+
+../../python/dgl/view.py::HeteroNodeView:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../python/setup.py::BinaryDistribution:
+  Bases: Distribution
+  Methods: 1
+  Attributes: 0
+
+../../tests/dist/python/rpc_basic.py::HelloRequest:
+  Bases: dgl.distributed.Request
+  Methods: 4
+  Attributes: 0
+
+../../tests/dist/python/rpc_basic.py::HelloResponse:
+  Bases: dgl.distributed.Response
+  Methods: 3
+  Attributes: 0
+
+../../tests/dist/python/run_dist_objects.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../tests/distributed/test_mp_dataloader.py::NeighborSampler:
+  Bases: object
+  Methods: 2
+  Attributes: 0
+
+../../tests/distributed/test_rpc.py::HelloRequest:
+  Bases: dgl.distributed.Request
+  Methods: 4
+  Attributes: 0
+
+../../tests/distributed/test_rpc.py::HelloResponse:
+  Bases: dgl.distributed.Response
+  Methods: 3
+  Attributes: 0
+
+../../tests/distributed/test_rpc.py::MyRequest:
+  Bases: dgl.distributed.Request
+  Methods: 4
+  Attributes: 0
+
+../../tests/distributed/test_rpc.py::MyResponse:
+  Bases: dgl.distributed.Response
+  Methods: 3
+  Attributes: 0
+
+../../tests/distributed/test_rpc.py::TimeoutRequest:
+  Bases: dgl.distributed.Request
+  Methods: 4
+  Attributes: 0
+
+../../tests/distributed/test_rpc.py::TimeoutResponse:
+  Bases: dgl.distributed.Response
+  Methods: 3
+  Attributes: 0
+
+../../tests/lint/clangformat_linter.py::LintMessage:
+  Bases: NamedTuple
+  Methods: 0
+  Attributes: 0
+
+../../tests/lint/clangformat_linter.py::LintSeverity:
+  Bases: str, Enum
+  Methods: 0
+  Attributes: 0
+
+../../tests/lint/lint.py::LintHelper:
+  Bases: object
+  Methods: 5
+  Attributes: 0
+
+../../tests/lint/ufmt_linter.py::LintMessage:
+  Bases: NamedTuple
+  Methods: 0
+  Attributes: 0
+
+../../tests/lint/ufmt_linter.py::LintSeverity:
+  Bases: str, Enum
+  Methods: 0
+  Attributes: 0
+
+../../tests/python/common/data/test_data.py::CustDataParser:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../tests/python/common/data/test_data.py::HashTestDataset:
+  Bases: data.DGLDataset
+  Methods: 2
+  Attributes: 0
+
+../../tests/python/mxnet/test_nn.py::ExampleLayer:
+  Bases: gluon.nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../tests/python/mxnet/test_nn.py::MyMod:
+  Bases: mx.gluon.nn.Block
+  Methods: 2
+  Attributes: 0
+
+../../tests/python/pytorch/graphbolt/test_itemset.py::InvalidLength:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+../../tests/python/pytorch/graphbolt/test_subgraph_sampler.py::SamplerType:
+  Bases: Enum
+  Methods: 0
+  Attributes: 0
+
+../../tests/python/pytorch/nn/test_nn.py::ExampleLayer:
+  Bases: th.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tests/python/pytorch/nn/test_nn.py::Model:
+  Bases: th.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tests/python/pytorch/nn/test_nn.py::MyMod:
+  Bases: th.nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tests/python/tensorflow/test_nn.py::MyMod:
+  Bases: tf.keras.layers.Layer
+  Methods: 2
+  Attributes: 0
+
+../../tests/scripts/ci_report/report.py::JobStatus:
+  Bases: enum.Enum
+  Methods: 0
+  Attributes: 0
+
+../../tests/tools/test_launch.py::Args:
+  Bases:
+  Methods: 0
+  Attributes: 0
+
+../../tests/tools/test_launch.py::TestConstructDglClientEnvVars:
+  Bases: unittest.TestCase
+  Methods: 1
+  Attributes: 0
+
+../../tests/tools/test_launch.py::TestConstructDglServerEnvVars:
+  Bases: unittest.TestCase
+  Methods: 1
+  Attributes: 0
+
+../../tests/tools/test_launch.py::TestWrapCmdWithLocalEnvvars:
+  Bases: unittest.TestCase
+  Methods: 1
+  Attributes: 0
+
+../../tests/tools/test_launch.py::TestWrapUdfInTorchDistLauncher:
+  Bases: unittest.TestCase
+  Methods: 3
+  Attributes: 0
+
+../../tools/distpartitioning/array_readwriter/csv.py::CSVArrayParser:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../tools/distpartitioning/array_readwriter/numpy_array.py::NumpyArrayParser:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../tools/distpartitioning/array_readwriter/parquet.py::ParquetArrayParser:
+  Bases: object
+  Methods: 3
+  Attributes: 0
+
+../../tools/distpartitioning/dist_lookup.py::DistLookupService:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+../../tools/partition_algo/base.py::PartitionMeta:
+  Bases: dt.BaseModel
+  Methods: 0
+  Attributes: 0
+
+../../tutorials/blitz/1_introduction.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/blitz/3_message_passing.py::Model:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/blitz/3_message_passing.py::SAGEConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/blitz/3_message_passing.py::WeightedSAGEConv:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/blitz/4_link_predict.py::DotPredictor:
+  Bases: nn.Module
+  Methods: 1
+  Attributes: 0
+
+../../tutorials/blitz/4_link_predict.py::GraphSAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/blitz/4_link_predict.py::MLPPredictor:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../tutorials/blitz/5_graph_classification.py::GCN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/blitz/6_load_data.py::KarateClubDataset:
+  Bases: DGLDataset
+  Methods: 4
+  Attributes: 0
+
+../../tutorials/blitz/6_load_data.py::SyntheticDataset:
+  Bases: DGLDataset
+  Methods: 4
+  Attributes: 0
+
+../../tutorials/models/1_gnn/1_gcn.py::GCNLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/1_gcn.py::Net:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/4_rgcn.py::Model:
+  Bases: nn.Module
+  Methods: 7
+  Attributes: 0
+
+../../tutorials/models/1_gnn/4_rgcn.py::RGCNLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/6_line_graph.py::LGNN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/6_line_graph.py::LGNNCore:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/6_line_graph.py::LGNNLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/9_gat.py::GAT:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/1_gnn/9_gat.py::GATLayer:
+  Bases: nn.Module
+  Methods: 6
+  Attributes: 0
+
+../../tutorials/models/1_gnn/9_gat.py::MultiHeadGATLayer:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/2_small_graph/3_tree-lstm.py::TreeLSTM:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/2_small_graph/3_tree-lstm.py::TreeLSTMCell:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::AddEdge:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::AddNode:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::ChooseDestAndUpdate:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::DGMG:
+  Bases: DGMGSkeleton
+  Methods: 7
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::DGMGSkeleton:
+  Bases: nn.Module
+  Methods: 7
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::GraphEmbed:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/models/3_generative_model/5_dgmg.py::GraphProp:
+  Bases: nn.Module
+  Methods: 4
+  Attributes: 0
+
+../../tutorials/models/4_old_wines/2_capsule.py::DGLRoutingLayer:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+../../tutorials/multi/1_graph_classification.py::GIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../../tutorials/multi/2_node_classification.py::SAGE:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+../tests/test_pipeline.py::ExperimentSpec:
+  Bases: NamedTuple
+  Methods: 0
+  Attributes: 0
+
+apply_pipeline/graphpred/gen.py::ApplyGraphPredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+apply_pipeline/graphpred/gen.py::ApplyGraphpredPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+apply_pipeline/graphpred/gen.py::ApplyGraphpredPipelineCfg:
+  Bases: BaseModel
+  Methods: 0
+  Attributes: 0
+
+apply_pipeline/nodepred/gen.py::ApplyNodePredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+apply_pipeline/nodepred/gen.py::ApplyNodepredPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+apply_pipeline/nodepred_sample/gen.py::ApplyNodePredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+apply_pipeline/nodepred_sample/gen.py::ApplyNodepredNsPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+model/edge_encoder/bilinear.py::BilinearPredictor:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/edge_encoder/dot.py::DotPredictor:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/edge_encoder/ele.py::ElementWiseProductPredictor:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/graph_encoder/gin_ogbg.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/graph_encoder/gin_ogbg.py::OGBGGIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/graph_encoder/pna.py::MLP:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/graph_encoder/pna.py::PNA:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/graph_encoder/pna.py::SimplePNAConv:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+model/node_encoder/gat.py::GAT:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+model/node_encoder/gcn.py::GCN:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+model/node_encoder/gin.py::GIN:
+  Bases: nn.Module
+  Methods: 2
+  Attributes: 0
+
+model/node_encoder/sage.py::GraphSAGE:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+model/node_encoder/sgc.py::SGC:
+  Bases: nn.Module
+  Methods: 3
+  Attributes: 0
+
+pipeline/graphpred/gen.py::GraphPredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+pipeline/graphpred/gen.py::GraphpredPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+pipeline/graphpred/gen.py::GraphpredPipelineCfg:
+  Bases: BaseModel
+  Methods: 0
+  Attributes: 0
+
+pipeline/linkpred/gen.py::LinkPredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+pipeline/linkpred/gen.py::LinkpredPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+pipeline/linkpred/gen.py::LinkpredPipelineCfg:
+  Bases: BaseModel
+  Methods: 0
+  Attributes: 0
+
+pipeline/nodepred/gen.py::NodePredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+pipeline/nodepred/gen.py::NodepredPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+pipeline/nodepred/gen.py::NodepredPipelineCfg:
+  Bases: BaseModel
+  Methods: 0
+  Attributes: 0
+
+pipeline/nodepred_sample/gen.py::Config:
+  Bases:
+  Methods: 0
+  Attributes: 0
+
+pipeline/nodepred_sample/gen.py::NodePredUserConfig:
+  Bases: UserConfig
+  Methods: 0
+  Attributes: 0
+
+pipeline/nodepred_sample/gen.py::NodepredNSPipelineCfg:
+  Bases: BaseModel
+  Methods: 0
+  Attributes: 0
+
+pipeline/nodepred_sample/gen.py::NodepredNsPipeline:
+  Bases: PipelineBase
+  Methods: 6
+  Attributes: 0
+
+pipeline/nodepred_sample/gen.py::SamplerConfig:
+  Bases: BaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/base_model.py::Config:
+  Bases:
+  Methods: 0
+  Attributes: 0
+
+utils/base_model.py::DGLBaseModel:
+  Bases: PydanticBaseModel
+  Methods: 1
+  Attributes: 0
+
+utils/base_model.py::DeviceEnum:
+  Bases: str, Enum
+  Methods: 0
+  Attributes: 0
+
+utils/base_model.py::EarlyStopConfig:
+  Bases: DGLBaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/early_stop.py::EarlyStopping:
+  Bases:
+  Methods: 4
+  Attributes: 0
+
+utils/enter_config.py::PipelineConfig:
+  Bases: DGLBaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/enter_config.py::UserConfig:
+  Bases: DGLBaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/factory.py::ApplyPipelineFactory:
+  Bases:
+  Methods: 1
+  Attributes: 0
+
+utils/factory.py::Base:
+  Bases: DGLBaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/factory.py::DataFactoryClass:
+  Bases:
+  Methods: 12
+  Attributes: 0
+
+utils/factory.py::EdgeBase:
+  Bases: DGLBaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/factory.py::ModelFactory:
+  Bases:
+  Methods: 11
+  Attributes: 0
+
+utils/factory.py::NodeBase:
+  Bases: DGLBaseModel
+  Methods: 0
+  Attributes: 0
+
+utils/factory.py::PipelineBase:
+  Bases: ABC
+  Methods: 4
+  Attributes: 0
+
+utils/factory.py::PipelineFactory:
+  Bases:
+  Methods: 5
+  Attributes: 0
+
+utils/factory.py::SamplerFactory:
+  Bases:
+  Methods: 9
+  Attributes: 0
