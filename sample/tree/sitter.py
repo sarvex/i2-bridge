@@ -1,16 +1,18 @@
-import os
-from pathlib import Path
-import tempfile
-import shutil
-from tree_sitter import Language, Parser, Node
-import subprocess
-from git import Repo, Git
-from git.exc import GitCommandError
-from dataclasses import dataclass
-from typing import List, Dict, Optional
 import json
+import os
+import shutil
+import subprocess
+import tempfile
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Dict, List, Optional
 from urllib.parse import urlparse
+
 import tree_sitter_python
+from git import Git, Repo
+from git.exc import GitCommandError
+from tree_sitter import Language, Node, Parser
+
 
 @dataclass
 class FunctionInfo:
@@ -40,7 +42,7 @@ class ModernPythonAnalyzer:
         """Initialize the analyzer with a repository path"""
         self.repo_path = Path(repo_path)
         self.parser = Parser()
-        self.parser.set_language(tree_sitter_python.language())  # type: ignore
+        self.parser.set_language(tree_sitter_python.language())
 
         # Storage for analysis results
         self.classes: Dict[str, ClassInfo] = {}
