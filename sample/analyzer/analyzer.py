@@ -64,6 +64,7 @@ class FunctionInfo:
     end_line: int
     is_method: bool
     is_async: bool
+    signature: str
 
 @dataclass
 class ClassInfo:
@@ -192,7 +193,8 @@ class BaseAnalyzer(ABC):
             line_number=node.lineno,
             end_line=node.end_lineno or node.lineno,
             is_method=isinstance(node.parent, nodes.ClassDef),
-            is_async=isinstance(node, nodes.AsyncFunctionDef)
+            is_async=isinstance(node, nodes.AsyncFunctionDef),
+            signature=f"{node.name}({', '.join(arg.name for arg in node.args.args)})"
         )
 
     def _extract_class_info(self, node: nodes.ClassDef) -> ClassInfo:
@@ -280,10 +282,21 @@ class BaseAnalyzer(ABC):
             f"- Average Complexity: {metrics['average_complexity']:.2f}",
             f"- Total Lines of Code: {metrics['total_lines']}",
             f"- Analysis Errors: {metrics['errors']}\n",
-            "Class Hierarchy:"
+            "Functions:",
         ]
 
+        # Add function information
+        for func_path, func_info in sorted(self.functions.items()):
+            report.extend([
+                f"\n{func_path}:",
+                f"  Signature: {func_info.signature}",
+                f"  Line: {func_info.line_number}",
+                f"  Decorators: {', '.join(func_info.decorators) or 'None'}",
+                f"  Docstring: {func_info.docstring or 'None'}"
+            ])
+
         # Add class information
+        report.extend(["\nClass Hierarchy:"])
         for class_path, class_info in sorted(self.classes.items()):
             report.extend([
                 f"\n{class_path}:",
