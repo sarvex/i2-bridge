@@ -55,6 +55,7 @@ logger = logging.getLogger(__name__)
 class FunctionInfo:
     """Store detailed information about a function or method."""
     name: str
+    module: str
     args: List[str]
     returns: Optional[str]
     docstring: Optional[str]
@@ -115,27 +116,22 @@ class BaseAnalyzer(ABC):
         pass
 
     def _analyze_file(self, file_path: str) -> None:
-        """
-        Analyze a single Python file and extract its AST information.
-
-        Args:
-            file_path: Path to the Python file to analyze
-        """
+        """Analyze a single Python file and extract its AST information."""
         try:
             relative_path = os.path.relpath(file_path, self.package_path)
             logger.info(f"Analyzing file: {relative_path}")
 
             with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
+                source = f.read()
 
             # Parse the file using astroid
-            module = astroid.parse(content, path=file_path)
+            module = astroid.parse(source, path=file_path)
             self.modules[relative_path] = module
 
-            # Analyze different aspects of the module
+            # Pass source to analysis methods
             self._analyze_imports(module, relative_path)
-            self._analyze_classes(module, relative_path)
-            self._analyze_functions(module, relative_path)
+            self._analyze_classes(module, relative_path, source)
+            self._analyze_functions(module, relative_path, source)
 
         except Exception as e:
             logger.error(f"Error analyzing {file_path}: {str(e)}")
@@ -155,20 +151,20 @@ class BaseAnalyzer(ABC):
                     else:
                         self.imports[file_path].add(name)
 
-    def _analyze_functions(self, module: nodes.Module, file_path: str) -> None:
+    def _analyze_functions(self, module: nodes.Module, file_path: str, source: str) -> None:
         """Analyze all functions in a module, including methods."""
         for node in module.nodes_of_class(nodes.FunctionDef):
             if isinstance(node.parent, nodes.Module):  # Only module-level functions
-                func_info = self._extract_function_info(node)
+                func_info = self._extract_function_info(node, source)
                 self.functions[f"{file_path}::{func_info.name}"] = func_info
 
-    def _analyze_classes(self, module: nodes.Module, file_path: str) -> None:
+    def _analyze_classes(self, module: nodes.Module, file_path: str, source: str) -> None:
         """Analyze all classes in a module."""
         for node in module.nodes_of_class(nodes.ClassDef):
-            class_info = self._extract_class_info(node)
+            class_info = self._extract_class_info(node, source)
             self.classes[f"{file_path}::{class_info.name}"] = class_info
 
-    def _extract_function_info(self, node: nodes.FunctionDef) -> FunctionInfo:
+    def _extract_function_info(self, node: nodes.FunctionDef, source: str) -> FunctionInfo:
         """Extract detailed information about a function."""
         args = [arg.name for arg in node.args.args]
         returns = node.returns.as_string() if node.returns else None
@@ -185,6 +181,7 @@ class BaseAnalyzer(ABC):
 
         return FunctionInfo(
             name=node.name,
+            module=node.root().name,
             args=args,
             returns=returns,
             docstring=docstring,
@@ -197,14 +194,14 @@ class BaseAnalyzer(ABC):
             signature=f"{node.name}({', '.join(arg.name for arg in node.args.args)})"
         )
 
-    def _extract_class_info(self, node: nodes.ClassDef) -> ClassInfo:
+    def _extract_class_info(self, node: nodes.ClassDef, source: str) -> ClassInfo:
         """Extract detailed information about a class."""
         methods = {}
         attributes = []
 
         for child in node.get_children():
             if isinstance(child, nodes.FunctionDef):
-                method_info = self._extract_function_info(child)
+                method_info = self._extract_function_info(child, source)
                 methods[child.name] = method_info
             elif isinstance(child, nodes.AssignName):
                 attributes.append(child.name)
@@ -289,6 +286,7 @@ class BaseAnalyzer(ABC):
         for func_path, func_info in sorted(self.functions.items()):
             report.extend([
                 f"\n{func_path}:",
+                f"  Module: {func_info.module}",
                 f"  Signature: {func_info.signature}",
                 f"  Line: {func_info.line_number}",
                 f"  Decorators: {', '.join(func_info.decorators) or 'None'}",
@@ -661,14 +659,27 @@ class GitRepositoryAnalyzer(BaseAnalyzer):
             self.cleanup()
 
     def _clone_repository(self):
-        """Clone the Git repository"""
-        logger.info(f"Cloning {self.git_url}...")
-        Repo.clone_from(
-            self.git_url,
-            self.temp_dir,
-            depth=1,
-            branch=self.branch
-        )
+        """Clone the Git repository with fallback branch detection"""
+        try:
+            logger.info(f"Cloning {self.git_url}...")
+            # Try main first
+            try:
+                Repo.clone_from(
+                    self.git_url,
+                    self.temp_dir,
+                    depth=1,
+                    branch='main'
+                )
+            except GitCommandError:
+                # Fallback to master
+                Repo.clone_from(
+                    self.git_url,
+                    self.temp_dir,
+                    depth=1,
+                    branch='master'
+                )
+        except GitCommandError as e:
+            raise RuntimeError(f"Failed to clone repository: {str(e)}")
 
     def _process_cloned_repo(self):
         """Process the cloned repository"""
@@ -787,21 +798,23 @@ def analyze_package(package_path: str, output_file: Optional[str] = None, **kwar
         raise RuntimeError(error_msg)
 
 def main():
-    """
-    Command-line interface for the package analyzer.
-    Provides a simple way to analyze packages from the command line.
-    """
+    """Command-line interface for the package analyzer."""
     if len(sys.argv) < 2:
-        print("Usage: python package_analyzer.py <package_path> [output_file]")
+        print("Usage: python analyzer.py <package_path> [output_file]")
         print("\nSupported package types:")
         print("  - Python source directories")
         print("  - Wheel packages (.whl)")
         print("  - ZIP archives (.zip)")
         print("  - TAR archives (.tar, .tar.gz, .tgz)")
         print("  - GZIP files (.gz)")
-        print("\nArguments:")
-        print("  package_path: Path to the Python package to analyze")
-        print("  output_file: Optional path to save the analysis report")
+        print("  - Git repositories (HTTPS/SSH URLs)")
+        print("\nOptions:")
+        print("  package_path: Path to package or Git URL")
+        print("  output_file: Optional JSON report path")
+        print("\nExamples:")
+        print("  python analyzer.py ./my_package")
+        print("  python analyzer.py package-1.0.whl")
+        print("  python analyzer.py https://github.com/user/repo")
         sys.exit(1)
 
     package_path = sys.argv[1]
