@@ -37,8 +37,8 @@ from typing import Any, Dict, List, Optional, Set, Tuple, Union
 import astroid
 import uncompyle6
 from astroid import nodes
+from git import GitCommandError, Repo
 from wheel.wheelfile import WheelFile
-from git import Repo, GitCommandError
 
 # Configure logging
 logging.basicConfig(
