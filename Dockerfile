@@ -1,4 +1,4 @@
-FROM python:3.11-slim as builder
+FROM python:3.13-slim as builder
 
 WORKDIR /app
 
@@ -13,7 +13,7 @@ RUN poetry config virtualenvs.create false \
     && poetry install --no-dev --no-interaction --no-ansi
 
 # Runtime stage
-FROM python:3.11-slim
+FROM python:3.13-slim
 
 WORKDIR /app
 
